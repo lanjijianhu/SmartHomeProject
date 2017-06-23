@@ -1,0 +1,332 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         23/May/2017  10:10:49 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\Source\ds18b20.c     #
+#    Command line       =  -f D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\P #
+#                          rojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. #
+#                          \Tools\CC2530DB\f8wRouter.cfg (-DCPU32MHZ          #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DRTR_NWK) -f                   #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\To #
+#                          ols\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO            #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFF1                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 D:\1-Zigbee\Project5-10\Pro #
+#                          ject\ZStack-2.5.1a\Projects\zstack\Samples\SampleA #
+#                          pp\Source\ds18b20.c -D ZTOOL_P1 -D MT_TASK -D      #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
+#                          -lC D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\RouterE #
+#                          B\List\ -lA D:\1-Zigbee\Project5-10\Project\ZStack #
+#                          -2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB #
+#                          \RouterEB\List\ --diag_suppress Pe001,Pa010 -o     #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Ob #
+#                          j\ -e --no_code_motion --debug --core=plain        #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I D:\1-Zigbee\Project5-10\Pr #
+#                          oject\ZStack-2.5.1a\Projects\zstack\Samples\Sample #
+#                          App\CC2530DB\ -I D:\1-Zigbee\Project5-10\Project\Z #
+#                          Stack-2.5.1a\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\Source\ -I D:\1-Zigbee\Project5-10\Projec #
+#                          t\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\..\..\..\ZMain\TI2530DB\ -I               #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\hal\include\ -I                     #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\hal\target\CC2530EB\ -I             #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\include\ -I                     #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\high_level\ -I                  #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\ -I             #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\single_chip\    #
+#                          -I D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\P #
+#                          rojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mt\ -I                           #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\include\ -I                    #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\saddr\ -I                  #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\sdata\ -I                  #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\af\ -I                        #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\nwk\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sapi\ -I                      #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sec\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sys\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\zdo\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\zmac\ -I D:\1-Zigbee\Project5-10\Pr #
+#                          oject\ZStack-2.5.1a\Projects\zstack\Samples\Sample #
+#                          App\CC2530DB\..\..\..\..\..\Components\zmac\f8w\   #
+#                          -Ohz --require_prototypes                          #
+#    List file          =  D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Li #
+#                          st\ds18b20.lst                                     #
+#    Object file        =  D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Ob #
+#                          j\ds18b20.r51                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\ds18b20.c
+      1          #include "ds18b20.h" 
+      2          
+      3          
+      4          #define Ds18b20IO P0_7       //温度传感器引脚
+      5          
+      6          void Delay_us(unsigned int k)//us延时函数
+                      ^
+Error[Pa045]: function "Delay_us" has no prototype
+      7          {
+      8              T1CC0L = 0x06; 
+      9              T1CC0H = 0x00; 
+     10              T1CTL = 0x02; 
+     11              while(k)
+     12              { 
+     13                  while(!(T1CNTL >= 0x04));
+     14                  k--;
+     15              }
+     16              T1CTL = 0x00;  //关闭定时器
+     17          }
+     18          
+     19          void Delay_ms(unsigned int k)
+                      ^
+Error[Pa045]: function "Delay_ms" has no prototype
+     20          {
+     21              T1CC0L = 0xe8;
+     22              T1CC0H = 0x03;
+     23              T1CTL = 0x0a; //模模式 32分频
+     24              while(k)
+     25              {
+     26                  while(!((T1CNTL >= 0xe8)&&(T1CNTH >= 0x03)));
+     27                  k--;
+     28              }
+     29              T1CTL = 0x00; //关闭定时器
+     30          }
+     31          
+     32          void Delay_s(unsigned int k)
+                      ^
+Error[Pa045]: function "Delay_s" has no prototype
+     33          {
+     34              while(k)
+     35              {
+     36                  Delay_ms(1000);
+     37                  k--;
+     38              }
+     39          }
+     40          
+     41          //时钟频率为32M
+     42          void Ds18b20Delay(unsigned int k)
+                      ^
+Error[Pa045]: function "Ds18b20Delay" has no prototype
+     43          {
+     44              while (k--)
+     45                {
+     46                asm("NOP");
+     47                asm("NOP");
+     48                asm("NOP");
+     49                asm("NOP");
+     50                asm("NOP");
+     51                asm("NOP");
+     52                asm("NOP");
+     53                asm("NOP");
+     54                asm("NOP");
+     55                }
+     56          }
+     57          
+     58          void Ds18b20InputInitial(void)//设置端口为输入
+                      ^
+Error[Pa045]: function "Ds18b20InputInitial" has no prototype
+     59          {
+     60              P0DIR &= 0x7f;
+     61          }
+     62          
+     63          void Ds18b20OutputInitial(void)//设置端口为输出
+                      ^
+Error[Pa045]: function "Ds18b20OutputInitial" has no prototype
+     64          {
+     65              P0DIR |= 0x80;
+     66          }
+     67          
+     68          //ds18b20初始化  初始化成功返回0x00，失败返回0x01
+     69          unsigned char Ds18b20Initial(void)
+     70          {
+     71              unsigned char Status = 0x00;
+     72              unsigned int CONT_1 = 0;
+     73              unsigned char Flag_1 = 1;
+     74              Ds18b20OutputInitial();
+     75              Ds18b20IO = 1;      //DQ复位
+     76              Ds18b20Delay(260);  //稍做延时
+     77              Ds18b20IO = 0;      //单片机将DQ拉低
+     78              Ds18b20Delay(750);  //精确延时 大于 480us 小于960us
+     79              Ds18b20IO = 1;      //拉高总线
+     80              Ds18b20InputInitial();//设置IO输入
+     81              while((Ds18b20IO != 0)&&(Flag_1 == 1))//等待ds18b20响应，具有防止超时功能
+     82              {                                      //等待约60ms左右
+     83                  CONT_1++;
+     84                  Ds18b20Delay(10);
+     85                  if(CONT_1 > 8000)Flag_1 = 0;
+     86                  Status = Ds18b20IO;
+     87              }
+     88              Ds18b20OutputInitial();
+     89              Ds18b20IO = 1;
+     90              Ds18b20Delay(100);
+     91              return Status;       //返回初始化状态
+     92          }
+     93          
+     94          void Ds18b20Write(unsigned char infor)
+                      ^
+Error[Pa045]: function "Ds18b20Write" has no prototype
+     95          {
+     96              unsigned int i;
+     97              Ds18b20OutputInitial();
+     98              for(i=0;i<8;i++)
+     99              {
+    100                  if((infor & 0x01))
+    101                  {
+    102                      Ds18b20IO = 0;
+    103                      Ds18b20Delay(6);
+    104                      Ds18b20IO = 1;
+    105                      Ds18b20Delay(50);
+    106                  }
+    107                  else
+    108                  {
+    109                      Ds18b20IO = 0;
+    110                      Ds18b20Delay(50);
+    111                      Ds18b20IO = 1;
+    112                      Ds18b20Delay(6);
+    113                  }
+    114                  infor >>= 1;
+    115              }
+    116          }
+    117          
+    118          unsigned char Ds18b20Read(void)
+                               ^
+Error[Pa045]: function "Ds18b20Read" has no prototype
+    119          {
+    120              unsigned char Value = 0x00;
+    121              unsigned int i;
+    122              Ds18b20OutputInitial();
+    123              Ds18b20IO = 1;
+    124              Ds18b20Delay(10);
+    125              for(i=0;i<8;i++)
+    126              {
+    127                  Value >>= 1; 
+    128                  Ds18b20OutputInitial();
+    129                  Ds18b20IO = 0;// 给脉冲信号
+    130                  Ds18b20Delay(3);
+    131                  Ds18b20IO = 1;// 给脉冲信号
+    132                  Ds18b20Delay(3);
+    133                  Ds18b20InputInitial();
+    134                  if(Ds18b20IO == 1) Value |= 0x80;
+    135                  Ds18b20Delay(15);
+    136              } 
+    137              return Value;
+    138          }
+    139          
+    140          //温度读取函数
+    141          unsigned char ReadDs18B20(void) 
+    142          {
+    143              unsigned char V1,V2;   //定义高低8位 缓冲
+    144              unsigned char temp;    //定义温度缓冲寄存器
+    145              
+    146              Ds18b20Initial();
+    147              Ds18b20Write(0xcc);    // 跳过读序号列号的操作
+    148              Ds18b20Write(0x44);    // 启动温度转换
+    149              
+    150              Ds18b20Initial();
+    151              Ds18b20Write(0xcc);    //跳过读序号列号的操作 
+    152              Ds18b20Write(0xbe);    //读取温度寄存器等（共可读9个寄存器） 前两个就是温度
+    153              
+    154              V1 = Ds18b20Read();    //低位
+    155              V2 = Ds18b20Read();    //高位
+    156              temp = ((V1 >> 4)+((V2 & 0x07)*16)); //转换数据 
+    157          
+    158              return temp;
+    159          }
+    160          
+    161          //温度读取函数 带1位小数位
+    162          float floatReadDs18B20(void) 
+    163          {
+    164              unsigned char V1,V2;   //定义高低8位 缓冲
+    165              unsigned int temp;     //定义温度缓冲寄存器
+    166              float fValue;
+    167              Ds18b20Initial();
+    168              Ds18b20Write(0xcc);    // 跳过读序号列号的操作
+    169              Ds18b20Write(0x44);    // 启动温度转换
+    170              
+    171              Ds18b20Initial();
+    172              Ds18b20Write(0xcc);    //跳过读序号列号的操作 
+    173              Ds18b20Write(0xbe);    //读取温度寄存器等（共可读9个寄存器） 前两个就是温度
+    174              
+    175              V1 = Ds18b20Read();    //低位
+    176              V2 = Ds18b20Read();    //高位
+    177              //temp = ((V1 >> 4)+((V2 & 0x07)*16)); //转换数据 
+    178              temp=V2*0xFF+V1;
+    179              fValue = temp*0.0625;
+    180              
+    181              return fValue;
+    182          }
+
+Errors: 8
+Warnings: none

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="titlr_bg_color">#E9F6FE</color>
+    <color name="red">#ffcc0000</color>
+    <color name="blue">#1A61A3</color>
+    <color name="yellow1">#FECE00</color>
+    <color name="greed">#34FA07</color>
+
+    <color name="bg_corlor">#E9F6FE</color>
+    <color name="orange_normal">#FD8225</color>
+    <!--按下时80%的透明度-->
+    <color name="orange_pressed">#CCFD8225</color>
+    <color name="none">#0000</color>
+
+    <color name="maintab_titlebar_bg">#f8f8f8</color>
+    <color name="gray_line">#dedede</color>
+
+    <color name="text_ckecked">#1761A0</color>
+    <color name="live_layout_default">#E9F6FE</color>
+    <color name="abc_tab_text_normal">#212121</color>
+    <color name="text_color">#728CC6</color>
+    <color name="btn_bg_default">#fafafa</color>
+    <color name="btn_bg_pressed">#f1f1f1</color>
+    <color name="bar_background_color">#ffcdcdcd</color>
+    <color name="whites">#ffffff</color>
+    <color name="gray">#a3a3a3</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="transparent_half">#88000000</color>
+    <color name="background_blue">#297dee</color>
+    <color name="background_gray">#eaeaea</color>
+    <color name="background_blue_white">#dbf3fc</color>
+    <color name="text_gray">#979797</color>
+    <color name="text_black">#4e4e4e</color>
+    <color name="text_blue">#298eee</color>
+    <color name="text_red">#fe631f</color>
+    <color name="tab_selected_bg">#C4E1E1</color>
+    <color name="timing_list_background">#EEEEF3</color>
+
+    <!---二维码-->
+    <color name="colorPrimary">#3E5386</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <!-- Android standard ICS color -->
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+
+
+    <!-- ceshi  -->
+    <color name="excellentStaus">#1ec846</color>
+    <color name="good">#1761a0</color>
+    <color name="medium">#ffce00</color>
+    <color name="poor">#ff1700</color>
+    <!-- ceshi  -->
+    <!-- ceshi  -->
+
+    <color name="color_2581ff">#2581ff</color>
+    <color name="color_333333">#333333</color>
+    <color name="COLOR_MC1">#fb5959</color>
+
+    <!--CanHi -->
+    <color name="transparent">#ffffffff</color>
+    <color name="live_view_layout_sides">#30000000</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="switch_tab_bg">#00c6ff</color>
+    <color name="layout_to_clivk_nor">#ffffff</color>
+
+
+    <color name="edit_box_bg">#eeeeef</color>
+    <color name="list_info_text">#999999</color>
+    <color name="font_normal">#757475</color>
+    <color name="font_title">#757475</color>
+
+    <color name="radio_bg_normal">#b6b6b7</color>
+
+    <color name="marquee_red">#ff0000</color>
+
+    <color name="rename_bg">#1761A0</color>
+
+    <color name="btn_zoom_state_false">#5aB8B8B8</color>
+    <color name="btn_zoom_state_true">#5aD6D6D6</color>
+
+    <color name="helptransparent"> #8000</color>
+
+</resources>

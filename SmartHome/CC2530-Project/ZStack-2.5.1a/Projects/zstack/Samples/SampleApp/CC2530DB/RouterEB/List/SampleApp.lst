@@ -1,0 +1,1083 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         23/May/2017  10:10:49 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\Source\SampleApp.c   #
+#    Command line       =  -f D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\P #
+#                          rojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. #
+#                          \Tools\CC2530DB\f8wRouter.cfg (-DCPU32MHZ          #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DRTR_NWK) -f                   #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\To #
+#                          ols\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO            #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFF1                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 D:\1-Zigbee\Project5-10\Pro #
+#                          ject\ZStack-2.5.1a\Projects\zstack\Samples\SampleA #
+#                          pp\Source\SampleApp.c -D ZTOOL_P1 -D MT_TASK -D    #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
+#                          -lC D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\RouterE #
+#                          B\List\ -lA D:\1-Zigbee\Project5-10\Project\ZStack #
+#                          -2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB #
+#                          \RouterEB\List\ --diag_suppress Pe001,Pa010 -o     #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Ob #
+#                          j\ -e --no_code_motion --debug --core=plain        #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I D:\1-Zigbee\Project5-10\Pr #
+#                          oject\ZStack-2.5.1a\Projects\zstack\Samples\Sample #
+#                          App\CC2530DB\ -I D:\1-Zigbee\Project5-10\Project\Z #
+#                          Stack-2.5.1a\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\Source\ -I D:\1-Zigbee\Project5-10\Projec #
+#                          t\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\..\..\..\ZMain\TI2530DB\ -I               #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\hal\include\ -I                     #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\hal\target\CC2530EB\ -I             #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\include\ -I                     #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\high_level\ -I                  #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\ -I             #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\single_chip\    #
+#                          -I D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\P #
+#                          rojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mt\ -I                           #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\include\ -I                    #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\saddr\ -I                  #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\sdata\ -I                  #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\af\ -I                        #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\nwk\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sapi\ -I                      #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sec\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sys\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\zdo\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\zmac\ -I D:\1-Zigbee\Project5-10\Pr #
+#                          oject\ZStack-2.5.1a\Projects\zstack\Samples\Sample #
+#                          App\CC2530DB\..\..\..\..\..\Components\zmac\f8w\   #
+#                          -Ohz --require_prototypes                          #
+#    List file          =  D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Li #
+#                          st\SampleApp.lst                                   #
+#    Object file        =  D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Ob #
+#                          j\SampleApp.r51                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\SampleApp.c
+      1          /**************************************************************************************************
+      2          Filename:       SampleApp.c
+      3          Revised:        $Date: 2009-03-18 15:56:27 -0700 (Wed, 18 Mar 2009) $
+      4          Revision:       $Revision: 19453 $
+      5          
+      6          Description:    Sample Application (no Profile).
+      7          
+      8          
+      9          Copyright 2007 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11          IMPORTANT: Your use of this Software is limited to those specific rights
+     12          granted under the terms of a software license agreement between the user
+     13          who downloaded the software, his/her employer (which must be your employer)
+     14          and Texas Instruments Incorporated (the "License").  You may not use this
+     15          Software unless you agree to abide by the terms of the License. The License
+     16          limits your use, and you acknowledge, that the Software may not be modified,
+     17          copied or distributed unless embedded on a Texas Instruments microcontroller
+     18          or used solely and exclusively in conjunction with a Texas Instruments radio
+     19          frequency transceiver, which is integrated into your product.  Other than for
+     20          the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21          works of, modify, distribute, perform, display or sell this Software and/or
+     22          its documentation for any purpose.
+     23          
+     24          YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25          PROVIDED 揂S IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26          INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27          NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28          TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29          NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30          LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31          INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32          OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33          OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34          (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36          Should you have any questions regarding your right to use this Software,
+     37          contact Texas Instruments Incorporated at www.TI.com.
+     38          **************************************************************************************************/
+     39          
+     40          /*********************************************************************
+     41          This application isn't intended to do anything useful, it is
+     42          intended to be a simple example of an application's structure.
+     43          
+     44          This application sends it's messages either as broadcast or
+     45          broadcast filtered group messages.  The other (more normal)
+     46          message addressing is unicast.  Most of the other sample
+     47          applications are written to support the unicast message model.
+     48          
+     49          Key control:
+     50          SW1:  Sends a flash command to all devices in Group 1.
+     51          SW2:  Adds/Removes (toggles) this device in and out
+     52          of Group 1.  This will enable and disable the
+     53          reception of the flash command.
+     54          *********************************************************************/
+     55          
+     56          /*********************************************************************
+     57          * INCLUDES
+     58          */
+     59          #include "OSAL.h"
+     60          #include "ZGlobals.h"
+     61          #include "AF.h"
+     62          #include "aps_groups.h"
+     63          #include "ZDApp.h"
+     64          
+     65          #include "SampleApp.h"
+     66          #include "SampleAppHw.h"
+     67          
+     68          #include "OnBoard.h"
+     69          
+     70          /* HAL */
+     71          #include "hal_lcd.h"
+     72          #include "hal_led.h"
+     73          #include "hal_key.h"
+     74          #include "MT_UART.h"
+     75          #include "MT_APP.h"
+     76          #include "MT.h"
+     77          
+     78          #include "ds18b20.h"
+     79          #include "LCD.h"
+
+  void LCD_DLY_ms(unsigned int ms)
+       ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\LCD.h",41  Error[Pa045]: 
+          function "LCD_DLY_ms" has no prototype
+
+  void LCD_WrDat(unsigned char dat)     
+       ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\LCD.h",54  Error[Pa045]: 
+          function "LCD_WrDat" has no prototype
+
+  void LCD_WrCmd(unsigned char cmd)
+       ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\LCD.h",76  Error[Pa045]: 
+          function "LCD_WrCmd" has no prototype
+
+  void LCD_Set_Pos(unsigned char x, unsigned char y) 
+       ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\LCD.h",98  Error[Pa045]: 
+          function "LCD_Set_Pos" has no prototype
+
+  void LCD_Fill(unsigned char bmp_dat) 
+       ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\LCD.h",105  Error[Pa045]: 
+          function "LCD_Fill" has no prototype
+
+  void LCD_CLS(void)
+       ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\LCD.h",118  Error[Pa045]: 
+          function "LCD_CLS" has no prototype
+
+  void LCD_Init(void)     
+       ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\LCD.h",131  Error[Pa045]: 
+          function "LCD_Init" has no prototype
+
+  void LCD_P6x8Str(unsigned char x, unsigned char y,unsigned char ch[])
+       ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\LCD.h",175  Error[Pa045]: 
+          function "LCD_P6x8Str" has no prototype
+
+  void LCD_P8x16Str(unsigned char x, unsigned char y,unsigned char ch[])
+       ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\LCD.h",190  Error[Pa045]: 
+          function "LCD_P8x16Str" has no prototype
+
+  void LCD_P16x16Ch(unsigned char x, unsigned char y, unsigned char N)
+       ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\LCD.h",208  Error[Pa045]: 
+          function "LCD_P16x16Ch" has no prototype
+
+  void Draw_BMP(unsigned char x0, unsigned char y0,unsigned char x1, unsigned char y1,unsigned char BMP[])
+       ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\LCD.h",226  Error[Pa045]: 
+          function "Draw_BMP" has no prototype
+     80          # include "stdlib.h"
+     81          #include "string.h"
+     82          
+     83          /*********************************************************************
+     84          * MACROS
+     85          */
+     86          
+     87          /*********************************************************************
+     88          * CONSTANTS
+     89          */
+     90          
+     91          /*********************************************************************
+     92          * TYPEDEFS
+     93          */
+     94          
+     95          
+     96          /*********************************************************************
+     97          * GLOBAL VARIABLES
+     98          */
+     99          uint8 AppTitle[] = "ALD2530 UART"; //应用程序名称
+    100          uint8 LedState = 0; // 保存当前Led 的状态
+    101          uint8 device=0x01;         //终端类型设置
+    102          static char* uartRecive;   //串口数据接收
+    103          
+    104          
+    105          
+    106          
+    107          // This list should be filled with Application specific Cluster IDs.
+    108          const cId_t SampleApp_ClusterList[SAMPLEAPP_MAX_CLUSTERS] =
+    109          {
+    110            SAMPLEAPP_PERIODIC_CLUSTERID,
+    111            SAMPLEAPP_FLASH_CLUSTERID  ,
+    112            SAMPLEAPP_P2P_CLUSTERID  ,
+    113            SAMPLEAPP_COM_CLUSTERID
+    114             
+    115          };
+    116          
+    117          const SimpleDescriptionFormat_t SampleApp_SimpleDesc =
+    118          {
+    119            SAMPLEAPP_ENDPOINT,              //  int Endpoint;
+    120            SAMPLEAPP_PROFID,                //  uint16 AppProfId[2];
+    121            SAMPLEAPP_DEVICEID,              //  uint16 AppDeviceId[2];
+    122            SAMPLEAPP_DEVICE_VERSION,        //  int   AppDevVer:4;
+    123            SAMPLEAPP_FLAGS,                 //  int   AppFlags:4;
+    124            SAMPLEAPP_MAX_CLUSTERS,          //  uint8  AppNumInClusters;
+    125            (cId_t *)SampleApp_ClusterList,  //  uint8 *pAppInClusterList;
+    126            SAMPLEAPP_MAX_CLUSTERS,          //  uint8  AppNumInClusters;
+    127            (cId_t *)SampleApp_ClusterList   //  uint8 *pAppInClusterList;
+    128          };
+    129          
+    130          // This is the Endpoint/Interface description.  It is defined here, but
+    131          // filled-in in SampleApp_Init().  Another way to go would be to fill
+    132          // in the structure here and make it a "const" (in code space).  The
+    133          // way it's defined in this sample app it is define in RAM.
+    134          endPointDesc_t SampleApp_epDesc;
+    135          
+    136          /*********************************************************************
+    137          * EXTERNAL VARIABLES
+    138          */
+    139          
+    140          /*********************************************************************
+    141          * EXTERNAL FUNCTIONS
+    142          */
+    143          
+    144          /*********************************************************************
+    145          * LOCAL VARIABLES
+    146          */
+    147          
+    148          uint8 SampleApp_TaskID;   // Task ID for internal task/event processing
+    149          // This variable will be received when
+    150          // SampleApp_Init() is called.
+    151          devStates_t SampleApp_NwkState;
+    152          
+    153          uint8 SampleApp_TransID;  // This is the unique message ID (counter)
+    154          
+    155          afAddrType_t SampleApp_Periodic_DstAddr;    //广播
+    156          afAddrType_t SampleApp_Flash_DstAddr;      //组播
+    157          afAddrType_t SampleApp_P2P_DstAddr;         //点播
+    158          
+    159          
+    160          aps_Group_t SampleApp_Group;
+    161          
+    162          uint8 SampleAppPeriodicCounter = 0;
+    163          uint8 SampleAppFlashCounter = 0;
+    164          
+    165          /*********************************************************************
+    166          * LOCAL FUNCTIONS
+    167          */
+    168          void SampleApp_HandleKeys( uint8 shift, uint8 keys );
+    169          void SampleApp_MessageMSGCB( afIncomingMSGPacket_t *pckt );
+    170          void SampleApp_SendPeriodicMessage(byte data[3]);
+    171          void SampleApp_SendFlashMessage( uint16 flashTime );
+    172          void SampleApp_Send_P2P_Message( void );
+    173          
+    174          //接收函数
+    175          void SampleApp_P2P_ReciveMessage(void);
+    176          //网蜂透传
+    177          void SampleApp_SerialCMD(mtOSALSerialData_t *cmdMsg);
+    178          //初始化函数 OLED
+    179          void OLED_Init();
+    180          //配置wifi模块
+    181          void ESP8266_Init(void);
+    182          //串口发送命令函数
+    183          uint8 wifiSendCmd(char* cmd,char*result,int timeOut);
+    184          //读取可燃气体
+    185          uint16 ReadGasData(void);
+    186          
+    187          /*********************************************************************
+    188          * NETWORK LAYER CALLBACKS
+    189          */
+    190          
+    191          /*********************************************************************
+    192          * PUBLIC FUNCTIONS
+    193          */
+    194          
+    195          /*********************************************************************
+    196          * @fn      SampleApp_Init
+    197          *
+    198          * @brief   Initialization function for the Generic App Task.
+    199          *          This is called during initialization and should contain
+    200          *          any application specific initialization (ie. hardware
+    201          *          initialization/setup, table initialization, power up
+    202          *          notificaiton ... ).
+    203          *
+    204          * @param   task_id - the ID assigned by OSAL.  This ID should be
+    205          *                    used to send messages and set timers.
+    206          *
+    207          * @return  none
+    208          */
+    209          void SampleApp_Init( uint8 task_id )
+    210          { 
+    211            SampleApp_TaskID = task_id;
+    212            SampleApp_NwkState = DEV_INIT;
+    213            SampleApp_TransID = 0;
+    214            
+    215            //------------------------配置串口---------------------------------
+    216            MT_UartInit();                    //串口初始化
+    217            MT_UartRegisterTaskID(task_id);   //注册串口任务
+    218          //  HalUARTWrite(0,"UartInit OK\n", sizeof("UartInit OK\n"));
+    219          
+    220            //------------OLED初始化--------------------------------------------
+    221            OLED_Init();
+                   ^
+Error[Pa045]: function "OLED_Init" has no prototype
+    222            
+    223           //--------------初始化引脚---------------------------------------------------
+    224            P0SEL &=0x7f;       //DS18b20的io口初始化P0_7;
+    225            P0SEL &=~0x10;    //人体红外设置 ，设置P0.4普通IO口
+    226            P0DIR &=~0x10;  //P0.4定义为输入口
+    227            /***********初始化8266****串口发送命令配置消息*********/
+    228          //  ESP8266_Init();
+    229            
+    230           
+    231            
+    232          #if defined ( BUILD_ALL_DEVICES )
+    233            // The "Demo" target is setup to have BUILD_ALL_DEVICES and HOLD_AUTO_START
+    234            // We are looking at a jumper (defined in SampleAppHw.c) to be jumpered
+    235            // together - if they are - we will start up a coordinator. Otherwise,
+    236            // the device will start as a router.
+    237            if ( readCoordinatorJumper() )
+    238              zgDeviceLogicalType = ZG_DEVICETYPE_COORDINATOR;
+    239            else
+    240              zgDeviceLogicalType = ZG_DEVICETYPE_ROUTER;
+    241          #endif // BUILD_ALL_DEVICES
+    242            
+    243          #if defined ( HOLD_AUTO_START )
+    244            // HOLD_AUTO_START is a compile option that will surpress ZDApp
+    245            //  from starting the device and wait for the application to
+    246            //  start the device.
+    247            ZDOInitDevice(0);
+    248          #endif
+    249            
+    250            // Setup for the periodic message's destination address
+    251            // Broadcast to everyone
+    252            SampleApp_Periodic_DstAddr.addrMode = (afAddrMode_t)AddrBroadcast;
+    253            SampleApp_Periodic_DstAddr.endPoint = SAMPLEAPP_ENDPOINT;
+    254            SampleApp_Periodic_DstAddr.addr.shortAddr = 0xFFFF;
+    255            
+    256            // Setup for the flash command's destination address - Group 1
+    257            SampleApp_Flash_DstAddr.addrMode = (afAddrMode_t)afAddrGroup;
+    258            SampleApp_Flash_DstAddr.endPoint = SAMPLEAPP_ENDPOINT;
+    259            SampleApp_Flash_DstAddr.addr.shortAddr = SAMPLEAPP_FLASH_GROUP;
+    260            
+    261            // P2P
+    262            SampleApp_P2P_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
+    263            SampleApp_P2P_DstAddr.endPoint = SAMPLEAPP_ENDPOINT;
+    264            SampleApp_P2P_DstAddr.addr.shortAddr = 0x0000;//协调器地址
+    265            
+    266            
+    267            
+    268            
+    269            // Fill out the endpoint description.
+    270            SampleApp_epDesc.endPoint = SAMPLEAPP_ENDPOINT;
+    271            SampleApp_epDesc.task_id = &SampleApp_TaskID;
+    272            SampleApp_epDesc.simpleDesc
+    273              = (SimpleDescriptionFormat_t *)&SampleApp_SimpleDesc;
+    274            SampleApp_epDesc.latencyReq = noLatencyReqs;
+    275            
+    276            // Register the endpoint description with the AF
+    277            afRegister( &SampleApp_epDesc );
+    278            
+    279            // Register for all key events - This app will handle all key events
+    280            RegisterForKeys( SampleApp_TaskID );
+    281            
+    282            // By default, all devices start out in Group 1
+    283            SampleApp_Group.ID = 0x0001;
+    284            osal_memcpy( SampleApp_Group.name, "Group 1", 7  );
+    285            aps_AddGroup( SAMPLEAPP_ENDPOINT, &SampleApp_Group );
+    286            
+    287          #if defined ( LCD_SUPPORTED )
+    288            HalLcdWriteString( "SampleApp", HAL_LCD_LINE_1 );
+    289          #endif
+    290          }
+    291          
+    292          
+    293          
+    294          
+    295          
+    296          
+    297          
+    298          /*********************************************************************
+    299          * @fn      SampleApp_ProcessEvent
+    300          *
+    301          * @brief   Generic Application Task event processor.  This function
+    302          *          is called to process all events for the task.  Events
+    303          *          include timers, messages and any other user defined events.
+    304          *
+    305          * @param   task_id  - The OSAL assigned task ID.
+    306          * @param   events - events to process.  This is a bit map and can
+    307          *                   contain more than one event.
+    308          *
+    309          * @return  none
+    310          */
+    311          uint16 SampleApp_ProcessEvent( uint8 task_id, uint16 events )
+    312          {
+    313            afIncomingMSGPacket_t *MSGpkt;
+    314            (void)task_id;  // Intentionally unreferenced parameter
+    315            
+    316            if ( events & SYS_EVENT_MSG )
+    317            {
+    318              MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SampleApp_TaskID );
+    319              while ( MSGpkt )
+    320              {
+    321                switch ( MSGpkt->hdr.event )
+    322                {
+    323                  
+    324                 case CMD_SERIAL_MSG: //串口收到数据后由MT_UART层传递过来的数据，用网蜂方法接收，编译时不定义 MT 相关内容，
+    325                       SampleApp_SerialCMD((mtOSALSerialData_t *)MSGpkt);
+    326                      break;
+    327                  
+    328                case KEY_CHANGE:
+    329                  SampleApp_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+    330                  break;
+    331                  
+    332                  // Received when a messages is received (OTA) for this endpoint
+    333                case AF_INCOMING_MSG_CMD:
+    334                  SampleApp_MessageMSGCB( MSGpkt );
+    335                  break;
+    336                  
+    337                  // Received whenever the device changes state in the network
+    338                case ZDO_STATE_CHANGE:
+    339                  SampleApp_NwkState = (devStates_t)(MSGpkt->hdr.status);
+    340                  if ( 
+    341                       (SampleApp_NwkState == DEV_ZB_COORD) ||
+    342                      (SampleApp_NwkState == DEV_ROUTER)
+    343                        || (SampleApp_NwkState == DEV_END_DEVICE) )
+    344                  {            
+    345                    
+    346                    // Start sending the periodic message in a regular interval.
+    347                    osal_start_timerEx( SampleApp_TaskID,
+    348                                       SAMPLEAPP_SEND_PERIODIC_MSG_EVT,
+    349                                       SAMPLEAPP_SEND_PERIODIC_MSG_TIMEOUT );
+    350                    
+    351                  }
+    352                  else
+    353                  {
+    354                    // Device is no longer in the network
+    355                  }
+    356                  
+    357                  
+    358                  
+    359                  break;
+    360                  
+    361                default:
+    362                  break;
+    363                }
+    364                
+    365                // Release the memory
+    366                osal_msg_deallocate( (uint8 *)MSGpkt );
+    367                
+    368                // Next - if one is available
+    369                MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SampleApp_TaskID );
+    370              }
+    371              
+    372              // return unprocessed events
+    373              return (events ^ SYS_EVENT_MSG);
+    374            }
+    375            
+    376            // Send a message out - This event is generated by a timer
+    377            //  (setup in SampleApp_Init()).
+    378            if ( events & SAMPLEAPP_SEND_PERIODIC_MSG_EVT )
+    379            {
+    380              // Send the periodic message
+    381              //    SampleApp_SendPeriodicMessage();
+    382          //    SampleApp_Send_P2P_Message();
+    383              
+    384              // Setup to send message again in normal period (+ a little jitter)
+    385              osal_start_timerEx( SampleApp_TaskID, SAMPLEAPP_SEND_PERIODIC_MSG_EVT,
+    386                                 (SAMPLEAPP_SEND_PERIODIC_MSG_TIMEOUT + (osal_rand() & 0x00FF)) );
+    387              
+    388              // return unprocessed events
+    389              return (events ^ SAMPLEAPP_SEND_PERIODIC_MSG_EVT);
+    390            }
+    391            
+    392            
+    393            // Discard unknown events
+    394            return 0;
+    395          }
+    396          
+    397          void OLED_Init(void){
+    398              LCD_Init();                      //oled 初始化  
+    399              LCD_Fill(0xff);                  //屏全亮 
+    400              LCD_CLS();   
+    401          //    LCD_P6x8Str(30,0,"temp");  
+    402          //    LCD_P6x8Str(60,0,"parm2");
+    403          //    LCD_P6x8Str(84,0,"parm3");
+    404              LCD_P6x8Str(10,0,"Welcom!") ;
+    405              
+    406              //初始化数据
+    407              LCD_P6x8Str(32,2,"0C");  
+    408              LCD_P6x8Str(55,2,"0H");
+    409              LCD_P6x8Str(84,2,"off");
+    410              
+    411              LCD_P6x8Str(32,4,"0C");  
+    412              LCD_P6x8Str(55,4,"null");
+    413              LCD_P6x8Str(84,4,"null");
+    414              
+    415               LCD_P6x8Str(32,6,"0C");  
+    416              LCD_P6x8Str(55,6,"0H");
+    417              LCD_P6x8Str(84,6,"off");
+    418              
+    419              LCD_P6x8Str(0,2,"Flow:");      
+    420              LCD_P6x8Str(0,4,"Door:"); 
+    421              LCD_P6x8Str(0,6,"Keic:")  ;
+    422             
+    423              LCD_P6x8Str(0,7,"Alarm") ;   
+    424          //    while(1);
+    425              
+    426          
+    427            }
+    428          
+    429          
+    430          
+    431          /*********************************************************************
+    432          * Event Generation Functions
+    433          */
+    434          /*********************************************************************
+    435          * @fn      SampleApp_HandleKeys
+    436          *
+    437          * @brief   Handles all key events for this device.
+    438          *
+    439          * @param   shift - true if in shift/alt.
+    440          * @param   keys - bit field for key events. Valid entries:
+    441          *                 HAL_KEY_SW_2
+    442          *                 HAL_KEY_SW_1
+    443          *
+    444          * @return  none
+    445          */
+    446          void SampleApp_HandleKeys( uint8 shift, uint8 keys )
+    447          {
+    448            (void)shift;  // Intentionally unreferenced parameter
+    449            
+    450            if ( keys & HAL_KEY_SW_6 )         //S1键
+    451            {
+    452              /* This key sends the Flash Command is sent to Group 1.
+    453              * This device will not receive the Flash Command from this
+    454              * device (even if it belongs to group 1).
+    455              */
+    456              //    SampleApp_SendFlashMessage( SAMPLEAPP_FLASH_DURATION );
+    457              
+    458          #if defined(ZDO_COORDINATOR) // 协调器发送广播
+    459          
+    460          //   uint8 data[8]={1,0,0,0,0,0,0,0};
+    461           /*********协议说明：暂时8byte, 100 100 100      每个终端占3位
+    462            第一位：选中终端。第二位：控制led(1为on ，0为off).第三位：扩展用  
+    463              **************/
+    464             byte data[3];
+    465             char  *str="210";
+    466              for(int i=0;i<3;i++){
+    467                data[i]=str[i]-'0';    //char 类型转换成int类型   
+    468              }
+    469               SampleApp_SendPeriodicMessage(data); //广播
+    470          #else // 路由器和终端才发送数据
+    471              SampleApp_SendFlashMessage(0); // 以组播方式发数据
+    472          #endif
+    473              
+    474            }
+    475            
+    476            if ( keys & HAL_KEY_SW_1 )         //S2键
+    477            {
+    478              /* The Flashr Command is sent to Group 1.
+    479              * This key toggles this device in and out of group 1.
+    480              * If this device doesn't belong to group 1, this application
+    481              * will not receive the Flash command sent to group 1.
+    482              */
+    483              aps_Group_t *grp;
+    484              grp = aps_FindGroup( SAMPLEAPP_ENDPOINT, SAMPLEAPP_FLASH_GROUP );
+    485              if ( grp )
+    486              {
+    487                // Remove from the group
+    488          //      HalUARTWrite(0, "RemoveGroud:", 12); // 提示信息
+    489                aps_RemoveGroup( SAMPLEAPP_ENDPOINT, SAMPLEAPP_FLASH_GROUP );
+    490              }
+    491              else
+    492              {
+    493                // Add to the flash group
+    494          //      HalUARTWrite(0, "AddGroud:", 9); // 提示信息
+    495                aps_AddGroup( SAMPLEAPP_ENDPOINT, &SampleApp_Group );
+    496                
+    497              }
+    498            }
+    499          }
+    500          
+    501          /*********************************************************************
+    502          * LOCAL FUNCTIONS
+    503          */
+    504          
+    505          /*********************************************************************
+    506          * @fn      SampleApp_MessageMSGCB
+    507          *
+    508          * @brief   Data message processor callback.  This function processes
+    509          *          any incoming data - probably from other devices.  So, based
+    510          *          on cluster ID, perform the intended action.
+    511          *
+    512          * @param   none
+    513          *
+    514          * @return  none
+    515          */
+    516          void SampleApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
+    517          {
+    518            /*16进制转ASCII码*/
+    519            uint8 asc_16[16]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'},i;
+    520            uint8 data;
+    521            
+    522            unsigned char *tem ;   //温度
+    523          
+    524            
+    525            switch ( pkt->clusterId )
+    526            {  
+    527              
+    528            case SAMPLEAPP_PERIODIC_CLUSTERID:     //广播
+    529          //    HalUARTWrite(0, pkt->cmd.Data, pkt->cmd.DataLength); // 输出接收到的数据
+    530          //    HalUARTWrite(0, "\n", 1); 
+    531              
+    532              //改变终端1 LED1
+    533              if(device==0x01  && pkt->cmd.Data[0]==1){  
+    534                LedState = ~LedState;  //Led
+    535                if(LedState == 0) 
+    536                  HalLedSet(HAL_LED_1, HAL_LED_MODE_ON);
+    537                else
+    538                  HalLedSet(HAL_LED_1, HAL_LED_MODE_OFF);
+    539              }
+    540              
+    541              //改变终端2的led
+    542              if(device==0x02 && pkt->cmd.Data[0]==2){ 
+    543                LedState = ~LedState;  //Led
+    544                if(LedState == 0) 
+    545                  HalLedSet(HAL_LED_1, HAL_LED_MODE_ON);
+    546                else
+    547                  HalLedSet(HAL_LED_1, HAL_LED_MODE_OFF);
+    548              }
+    549              
+    550              //改变终端3的led
+    551              if(device==0x02 && pkt->cmd.Data[0]==3){ 
+    552                LedState = ~LedState;  //Led
+    553                if(LedState == 0) 
+    554                  HalLedSet(HAL_LED_1, HAL_LED_MODE_ON);
+    555                else
+    556                  HalLedSet(HAL_LED_1, HAL_LED_MODE_OFF);
+    557              }
+    558              
+    559              break;
+    560              
+    561            case SAMPLEAPP_FLASH_CLUSTERID:      //组播
+    562                HalUARTWrite(0, "123456", 6); // 提示信息   
+    563              
+    564          //    data = (uint8)pkt->cmd.Data[0]; 
+    565          ////    HalUARTWrite(0, &data, 1);
+    566          //    if(data == 0)
+    567          //      HalLedSet(HAL_LED_1, HAL_LED_MODE_ON);
+    568          //    else
+    569          //      HalLedSet(HAL_LED_1, HAL_LED_MODE_OFF);
+    570              break;
+    571              
+    572              
+    573            case SAMPLEAPP_P2P_CLUSTERID:
+    574              //    temp=pkt->srcAddr.addr.shortAddr;  //读出数据包的16位短地址
+    575              switch (pkt->cmd.Data[0]){
+    576                 /******终端1Door** *****/
+    577              case 1:     
+    578          //      HalUARTWrite(0, pkt->cmd.Data, pkt->cmd.DataLength); 
+    579                /*************LED1**使用师兄板led点亮电平不同**********/  
+    580                if(pkt->cmd.Data[1]==1) 
+    581                  LCD_P6x8Str(60,2,"on ");
+    582                else   LCD_P6x8Str(60,2,"off");
+    583                /*********DS18B20************/
+    584                tem[0]=pkt->cmd.Data[2]; 
+                       ^
+Warning[Pe549]: variable "tem" is used before its value is set
+
+    uint8 asc_16[16]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'},i;
+          ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\SampleApp.c",519  Warning[Pe177]: 
+          variable "asc_16" was declared but never referenced
+
+    uint8 asc_16[16]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'},i;
+                                                                                       ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\SampleApp.c",519  Warning[Pe177]: 
+          variable "i" was declared but never referenced
+
+    uint8 data;
+          ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\SampleApp.c",520  Warning[Pe177]: 
+          variable "data" was declared but never referenced
+    585                tem[1]=pkt->cmd.Data[3];
+    586                LCD_P6x8Str(30,2,tem);  
+    587                /*********人体红外************/ 
+    588                if(pkt->cmd.Data[4]==1)   //有人
+    589                  LCD_P6x8Str(84,4,"alam ");     
+    590                else   LCD_P6x8Str(84,2,"null");     //没人
+    591                
+    592                  break;
+    593                  
+    594                  /******终端2*******/
+    595              case 2:      
+    596          //      HalUARTWrite(0,"EndDevice22",11);//串口提示
+    597                  /*************LED1************/ 
+    598                 if(pkt->cmd.Data[1]==1) 
+    599                 LCD_P6x8Str(60,4,"off");
+    600                 else   LCD_P6x8Str(60,4,"on ");
+    601                 /*********DS18B20************/
+    602                 tem[0]=pkt->cmd.Data[2]; 
+    603                 tem[1]=pkt->cmd.Data[3];
+    604                  LCD_P6x8Str(30,4,tem);  
+    605               /*********人体红外************/ 
+    606                if(pkt->cmd.Data[4]==1)   //有人
+    607                   LCD_P6x8Str(84,4,"on ");     
+    608                else   LCD_P6x8Str(84,4,"off");     //没人
+    609               
+    610              
+    611                
+    612                break;
+    613                   /******终端3*******/
+    614              case 3:          
+    615                break;
+    616                   /******其它*******/
+    617              default :       
+    618          //      HalUARTWrite(0,"NotEndDevice",12);//串口提示
+    619          //      HalUARTWrite(0,"\n",1);  
+    620                break;
+    621                
+    622                
+    623              }
+    624              
+    625              
+    626              //    /*****将短地址分解，ASC码打印************/
+    627              //    HalUARTWrite(0,&asc_16[temp/4096],1);
+    628              //    HalUARTWrite(0,&asc_16[temp%4096/256],1);
+    629              //    HalUARTWrite(0,&asc_16[temp%256/16],1);
+    630              //    HalUARTWrite(0,&asc_16[temp%16],1);
+    631              //    HalUARTWrite(0,"\n",1);
+    632              break;
+    633              
+    634            }
+    635          }
+    636            
+    637            
+    638            
+    639            /*********************************************************************
+    640            * @fn      SampleApp_SendPeriodicMessage
+    641            *
+    642            * @brief   Send the periodic message.
+    643            *
+    644            * @param   none
+    645            *
+    646            * @return  none
+    647            */
+    648            //广播  
+    649            void SampleApp_SendPeriodicMessage( byte data[3] )
+    650            {
+    651              
+    652              if ( AF_DataRequest( &SampleApp_Periodic_DstAddr, 
+    653                                  &SampleApp_epDesc,
+    654                                  SAMPLEAPP_PERIODIC_CLUSTERID,
+    655                                  3,
+    656                                  data,
+    657                                  &SampleApp_TransID,
+    658                                  AF_DISCV_ROUTE,
+    659                                  AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+    660              {
+    661              }
+    662              else
+    663              {
+    664                // Error occurred in request to send.
+    665              }
+    666            }
+    667            
+    668            /*********************************************************************
+    669            * @fn      SampleApp_SendFlashMessage
+    670            *
+    671            * @brief   Send the flash message to group 1.
+    672            *
+    673            * @param   flashTime - in milliseconds
+    674            *
+    675            * @return  none
+    676            */
+    677            void SampleApp_SendFlashMessage( uint16 flashTime )
+    678            {
+    679              LedState = ~LedState;  //Led
+    680          //    HalUARTWrite(0, "GT:", 3); // 提示发送数据
+    681              
+    682              if ( AF_DataRequest( &SampleApp_Flash_DstAddr, 
+    683                                  &SampleApp_epDesc,
+    684                                  SAMPLEAPP_FLASH_CLUSTERID,
+    685                                  1,
+    686                                  &LedState,
+    687                                  &SampleApp_TransID,
+    688                                  AF_DISCV_ROUTE,
+    689                                  AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+    690              {
+    691                if(LedState == 0) // 切换自身状态提示用户操作成功
+    692                  HalLedSet(HAL_LED_1, HAL_LED_MODE_ON);
+    693                else
+    694                  HalLedSet(HAL_LED_1, HAL_LED_MODE_OFF);
+    695              }
+    696              else
+    697              {
+    698                // Error occurred in request to send.
+    699              }
+    700            }
+    701            
+    702            
+    703            void SampleApp_Send_P2P_Message( void )
+    704            {
+    705              
+    706              byte send[6];          //发送数组
+    707          //    HalUARTWrite(0, "SendP2P:", 7); 
+    708              /*****终端1 Flower*****/  
+    709              if(SampleApp_NwkState==DEV_END_DEVICE &&device==0x01){    
+    710                 send[0]=device;         //终端标志值
+    711                
+    712                //读取led状态  赋值 并发送给协调器
+    713                if(LedState == 0) 
+    714                  send[1]=0;
+    715                   else send[1]=1;       
+    716                
+    717                //读取温度 dsp18b20   
+    718                byte str[2];
+    719                byte temp=0;
+    720                temp = ReadDs18B20(); //读取温度 
+    721                str[0] = temp/10+48;
+    722                str[1] = temp%10+48; 
+    723                send[2]=str[0]; 
+    724                send[3]=str[1];
+    725                
+    726                //读取湿度 检测
+    727                
+    728                
+    729                
+    730          //      if(PEOPLE == 1)
+    731          //      {
+    732          //        MicroWait (10000); // Wait 10ms
+    733          //        if(PEOPLE == 1)
+    734          //        {
+    735          //          send[4]=1;  
+    736          //        }
+    737          //      }
+    738          //      
+    739          //      else
+    740          //      {
+    741          //        send[4]=0;
+    742          //      }        
+    743                 //预留最后一位
+    744                    send[5]=0; 
+    745              }
+    746              
+    747              /*****终端2 OutDoor*****/   
+    748              else if(SampleApp_NwkState == DEV_END_DEVICE&&device==0x02)   
+    749              {
+    750                send[0]=device;         //赋值
+    751                  
+    752                //读取led状态  赋值 并发送给协调器
+    753                if(LedState == 0) send[1]=0;
+    754                   else send[1]=1;   
+    755                
+    756                //读取温度 dsp18b20   
+    757                byte str[2];
+    758                byte temp=0;
+    759                temp = ReadDs18B20(); //读取温度   
+    760                str[0] = temp/10+48;
+    761                str[1] = temp%10+48;  
+    762                send[2]=str[0]; 
+    763                send[3]=str[1];     
+    764                
+    765                
+    766                //人体红外检测 
+    767                if(PEOPLE == 1)
+    768                {
+    769                  MicroWait (10000); // Wait 10ms
+    770                  if(PEOPLE == 1)
+    771                  {
+    772                    send[4]=1;  
+    773                  }
+    774                }
+    775                
+    776                else
+    777                {
+    778                  send[4]=0;
+    779                }
+    780                
+    781               //预留最后一位
+    782                    send[5]=0;
+    783                
+    784              }        
+    785              
+    786              /*****不是终端设备*****/
+    787              else         
+    788              {
+    789                
+    790                for(int i=0;i<6;i++)
+    791                {send[i]=0; }
+    792                
+    793              }        
+    794              
+    795              
+    796              if ( AF_DataRequest( &SampleApp_P2P_DstAddr, &SampleApp_epDesc,
+    797                                  SAMPLEAPP_P2P_CLUSTERID,
+    798                                  6,
+    799                                  send,
+    800                                  &SampleApp_TransID,
+    801                                  AF_DISCV_ROUTE,
+    802                                  AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+    803              {
+    804              }
+    805              else
+    806              {
+    807                // Error occurred in request to send.
+    808              }
+    809            }
+    810            
+    811          
+    812          //透传
+    813          
+    814           void SampleApp_SerialCMD(mtOSALSerialData_t *cmdMsg)
+    815              {
+    816                uint8 i,len,*str=NULL; //len 有用数据长度
+    817                str=cmdMsg->msg; // 
+    818                len=*str; //msg 里的第 1 个字节代表后面的数据长度
+    819                uint8 recive[5];
+                             ^
+Warning[Pe550]: variable "recive" was set but never used
+
+  static char* uartRecive;   //串口数据接收
+               ^
+"D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\SampleApp.c",102  Warning[Pe177]: 
+          variable "uartRecive" was declared but never referenced
+    820           
+    821                /********打印出串口接收到的数据，用于提示*********/
+    822                for(i=1;i<=len;i++)  
+    823                {
+    824                   recive[i-1]=*(str+i);       //去掉头跟尾  需要过滤数据
+    825                  HalUARTWrite(0,str+i,1 );  
+    826                }                
+    827                   
+    828               
+    829                //处理接收到的数据
+    830          //      
+    831          //    if ( AF_DataRequest( &SampleApp_Periodic_DstAddr, &SampleApp_epDesc,
+    832          //      SAMPLEAPP_PERIODIC_CLUSTERID,//广播出去
+    833          //      3, // 数据长度
+    834          //      recive, //数据内容
+    835          //      &SampleApp_TransID,
+    836          //      AF_DISCV_ROUTE,
+    837          //      AF_DEFAULT_RADIUS) == afStatus_SUCCESS )
+    838          //    {
+    839          //    }
+    840          //     else
+    841          //     {
+    842          //       // Error occurred in request to send.
+    843          //     }
+    844                
+    845              }
+    846            /*********************************************************************
+    847            *********************************************************************/
+    848            
+    849          
+    850          ////读取气体
+    851          //uint16 ReadGasData(void){
+    852          //    uint16 reading = 0;
+    853          //    P0DIR &= ~0x40; // 设置 P0.6 为输入方式
+    854          //    asm("NOP");asm("NOP");
+    855          //    
+    856          ///* Clear ADC interrupt flag */
+    857          //  ADCIF = 0;
+    858          //  ADCCON3 = (0x40 | HAL_ADC_DEC_064 | HAL_ADC_CHANNEL_6);
+    859          //  /* Wait for the conversion to finish */
+    860          //  while ( !ADCIF );
+    861          //    asm("NOP");asm("NOP");
+    862          //  /* Read the result */
+    863          //    reading = ADCL;
+    864          //    reading |= (int16) (ADCH << 8);
+    865          //    reading >>= 8;
+    866          //    return reading;
+    867          //
+    868          //}
+
+Errors: 12
+Warnings: 6

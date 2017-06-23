@@ -1,0 +1,311 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         23/May/2017  09:40:22 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\Source\esp8266.c     #
+#    Command line       =  -f D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\P #
+#                          rojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. #
+#                          \Tools\CC2530DB\f8wRouter.cfg (-DCPU32MHZ          #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DRTR_NWK) -f                   #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\To #
+#                          ols\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO            #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFF1                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 D:\1-Zigbee\Project5-10\Pro #
+#                          ject\ZStack-2.5.1a\Projects\zstack\Samples\SampleA #
+#                          pp\Source\esp8266.c -D ZTOOL_P1 -D MT_TASK -D      #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
+#                          -lC D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\RouterE #
+#                          B\List\ -lA D:\1-Zigbee\Project5-10\Project\ZStack #
+#                          -2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB #
+#                          \RouterEB\List\ --diag_suppress Pe001,Pa010 -o     #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Ob #
+#                          j\ -e --no_code_motion --debug --core=plain        #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I D:\1-Zigbee\Project5-10\Pr #
+#                          oject\ZStack-2.5.1a\Projects\zstack\Samples\Sample #
+#                          App\CC2530DB\ -I D:\1-Zigbee\Project5-10\Project\Z #
+#                          Stack-2.5.1a\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\Source\ -I D:\1-Zigbee\Project5-10\Projec #
+#                          t\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\..\..\..\ZMain\TI2530DB\ -I               #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\hal\include\ -I                     #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\hal\target\CC2530EB\ -I             #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\include\ -I                     #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\high_level\ -I                  #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\ -I             #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\single_chip\    #
+#                          -I D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\P #
+#                          rojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mt\ -I                           #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\include\ -I                    #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\saddr\ -I                  #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\sdata\ -I                  #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\af\ -I                        #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\nwk\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sapi\ -I                      #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sec\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sys\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\zdo\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\zmac\ -I D:\1-Zigbee\Project5-10\Pr #
+#                          oject\ZStack-2.5.1a\Projects\zstack\Samples\Sample #
+#                          App\CC2530DB\..\..\..\..\..\Components\zmac\f8w\   #
+#                          -Ohz --require_prototypes                          #
+#    List file          =  D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Li #
+#                          st\esp8266.lst                                     #
+#    Object file        =  D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Ob #
+#                          j\esp8266.r51                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\Source\esp8266.c
+      1          #include "esp8266.h"
+      2          #include <string.h>
+      3          //除了以上的头文件，需要用到cc2530的串口、延时头文件
+      4          #include "hal_uart.h"
+      5          #include "Onboard.h"
+      6          
+      7          //硬件复位函数
+      8          //esp8266低电平复位，此函数把复位引脚拉低100ms左右再拉高延时1s左右
+      9          void ESP8266_Rst(void)
+     10          {
+     11            //定义cc2530控制复位的引脚
+     12            //设置引脚为低电平
+     13            //延时100ms左右
+     14            //设置引脚为高电平
+     15            //延时1s左右
+     16            
+     17          }
+     18          
+     19          
+     20          //初始化函数
+     21          /*初始化函数主要对WiFi模块进行配置，一般修改路由器连接和服务器连接的参数即可，其他
+     22          参数保持默认即可*/
+     23          void ESP8266_Init1(void)
+     24          {
+     25          //  ESP8266_Rst();//硬件复位
+     26            
+     27            ESP8266_DelayMs(1000);
+     28            
+     29            SendCmd(AT,"OK",10);//进入AT指令并进行相关配置		
+     30            
+     31            ESP8266_DelayMs(100);
+     32            
+     33            SendCmd(CWMODE,"OK",10);	
+     34            
+     35            ESP8266_DelayMs(100);
+     36            
+     37            SendCmd(RST,"OK",20);	
+     38            
+     39            ESP8266_DelayMs(1000);
+     40          
+     41            SendCmd(CWSAP,"OK",200);
+     42            
+     43            ESP8266_DelayMs(1000);
+     44            
+     45          //  SendCmd(CIPSTART,"OK",100);
+     46            SendCmd(CIPMUX,"OK",100);
+     47            
+     48            ESP8266_DelayMs(1000);
+     49            
+     50          //  SendCmd(CIPMODE,"OK",10);
+     51            SendCmd(CIPSTO,"OK",100);
+     52            
+     53             ESP8266_DelayMs(1000);
+     54            
+     55             SendCmd(SERVER,"OK",100);
+     56          
+     57          }
+     58          //发送AT指令函数
+     59          /**
+     60          功能：发送一条AT指令，返回1应答成功，0应答失败
+     61          输入参数：
+     62          cmd:待发送的指令
+     63          result：期待返回的结果
+     64          timeout：超时等待时间，步进为100ms
+     65          输出:1，应答成功；0，应答失败
+     66          */
+     67          uint8 SendCmd(char* cmd, char* result, int timeOut)//AT指令，包含应答和超时等待
+     68          {
+     69            unsigned char buf[1024]={'0'};
+     70            uint16 len=0;
+     71            ESP8266_ReceiveData(buf,&len);//读取数据，把之前的数据清零
+     72            memset(buf,0,sizeof(buf));//清除数据
+     73            len=0;
+     74            if(NULL != cmd) //不发送只等待
+     75            {
+     76              ESP8266_SendData((const unsigned char *)buf,strlen((const char *)cmd)); //发送数据
+     77            }
+     78            else 
+     79            {
+     80              ;
+     81            }
+     82            
+     83            if(NULL == result)//不用等待
+     84            {
+     85              return 1;
+     86            }
+     87            else
+     88            {
+     89              ;
+     90            }
+     91            do
+     92            {
+     93              ESP8266_DelayMs(100);
+     94              ESP8266_ReceiveData(buf,&len);
+     95              if(len >= strlen(result)) //收到数据
+     96              {
+     97                if(NULL != strstr((const char *)buf,(const char *)result))//和预期结果一样
+     98                {
+     99                  return 1;
+    100                }
+    101                else
+    102                {
+    103                  ;
+    104                }
+    105              }
+    106            }
+    107            while(timeOut--);
+    108            return 0;
+    109          
+    110          }
+    111          //检测WiFi模块是否连接
+    112          //返回1表示连接成功，0表示没连接
+    113          char ESP8266_CheckStatus(uint16 timeOut)//检测WiFi模块是否连接
+    114          {
+    115            char res=0;
+    116            ESP8266_IntoAtCmd();
+    117            res=SendCmd(CIPSTATUS, "STATUS:3", timeOut);
+    118            return res;
+    119          }
+    120          
+    121          
+    122          void ESP8266_SendData(const unsigned char *send_buf,uint16 buflen)//芯片发送数据给WiFi模块
+    123          {
+    124            HalUARTWrite(0, (uint8 *)send_buf, buflen);
+    125          }
+    126          void ESP8266_ReceiveData(unsigned char *receive_buf,uint16 *buflen)//芯片读取WiFi模块发送过来的数据
+    127          {
+    128            *buflen= HalUARTRead(0, (uint8 *)receive_buf,sizeof(receive_buf));
+    129          }
+    130          void ESP8266_IntoAtCmd(void)//进入AT指令模式
+    131          {
+    132            uint8 flag=0;
+    133            do
+    134            {
+    135              flag=SendCmd("+++", "+++",5); //进入AT模式
+    136            }
+    137            while(!flag);
+    138          }
+    139          void ESP8266_IntoCIPSEND(void)//进入透传模式
+    140          {
+    141            ESP8266_IntoAtCmd(); //进入AT模式
+    142            ESP8266_DelayMs(100);//延时函数
+    143            SendCmd("AT+CIPMODE=1\r\n", "OK",10); //"设置透传模式"
+    144            SendCmd("AT+CIPSEND\r\n", ">",10);//进入透传模式，可以开始传输数据
+    145          }
+    146          
+    147          
+    148          static void ESP8266_DelayMs(uint16 time)//延时函数
+    149          {
+    150            while(time)
+    151            {
+    152              MicroWait (1000);     // Wait 1ms
+    153              time--;
+    154            }
+    155            
+    156          }
+    157          
+    158          
+    159          void ESP8266_SendDataToService(const unsigned char *send_buf,uint16 buflen)//芯片发送数据给WiFi模块，透传模式
+    160          {
+    161            ESP8266_IntoCIPSEND();//进入透传模式
+    162            ESP8266_DelayMs(100);//延时函数
+    163            ESP8266_SendData(send_buf,buflen);
+    164            ESP8266_DelayMs(300);//延时函数
+    165            
+    166          }
+    167          
+    168          void ESP8266_Test(void)//测试
+    169          {
+    170            while(1)
+    171            {
+    172              ESP8266_Init();
+                     ^
+Error[Pe223]: function "ESP8266_Init" declared implicitly
+    173              ESP8266_DelayMs(1000);//延时函数
+    174            }
+    175          }
+
+Errors: 1
+Warnings: none

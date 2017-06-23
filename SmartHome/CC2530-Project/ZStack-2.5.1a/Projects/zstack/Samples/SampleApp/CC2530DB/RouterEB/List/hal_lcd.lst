@@ -1,0 +1,1318 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         23/May/2017  10:10:49 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Comp #
+#                          onents\hal\target\CC2530EB\hal_lcd.c               #
+#    Command line       =  -f D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\P #
+#                          rojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. #
+#                          \Tools\CC2530DB\f8wRouter.cfg (-DCPU32MHZ          #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DRTR_NWK) -f                   #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\To #
+#                          ols\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO            #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFF1                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 D:\1-Zigbee\Project5-10\Pro #
+#                          ject\ZStack-2.5.1a\Components\hal\target\CC2530EB\ #
+#                          hal_lcd.c -D ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC    #
+#                          -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -lC          #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Li #
+#                          st\ -lA D:\1-Zigbee\Project5-10\Project\ZStack-2.5 #
+#                          .1a\Projects\zstack\Samples\SampleApp\CC2530DB\Rou #
+#                          terEB\List\ --diag_suppress Pe001,Pa010 -o         #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Ob #
+#                          j\ -e --no_code_motion --debug --core=plain        #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I D:\1-Zigbee\Project5-10\Pr #
+#                          oject\ZStack-2.5.1a\Projects\zstack\Samples\Sample #
+#                          App\CC2530DB\ -I D:\1-Zigbee\Project5-10\Project\Z #
+#                          Stack-2.5.1a\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\Source\ -I D:\1-Zigbee\Project5-10\Projec #
+#                          t\ZStack-2.5.1a\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\..\..\..\ZMain\TI2530DB\ -I               #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\hal\include\ -I                     #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\hal\target\CC2530EB\ -I             #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\include\ -I                     #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\high_level\ -I                  #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\ -I             #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\mac\low_level\srf04\single_chip\    #
+#                          -I D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\P #
+#                          rojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mt\ -I                           #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\osal\include\ -I                    #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\saddr\ -I                  #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\services\sdata\ -I                  #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\af\ -I                        #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\nwk\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sapi\ -I                      #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sec\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\sys\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\zdo\ -I                       #
+#                          D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\zmac\ -I D:\1-Zigbee\Project5-10\Pr #
+#                          oject\ZStack-2.5.1a\Projects\zstack\Samples\Sample #
+#                          App\CC2530DB\..\..\..\..\..\Components\zmac\f8w\   #
+#                          -Ohz --require_prototypes                          #
+#    List file          =  D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Li #
+#                          st\hal_lcd.lst                                     #
+#    Object file        =  D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\RouterEB\Ob #
+#                          j\hal_lcd.r51                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\1-Zigbee\Project5-10\Project\ZStack-2.5.1a\Components\hal\target\CC2530EB\hal_lcd.c
+      1          /****************************************************************************
+      2          * Filename: hal_lcd.c
+      3          * Author:      Andy  https://aldsz.taobao.com
+      4          * Date:        2015-06-16
+      5          * Version:     1.0
+      6          * Description: OLED driver
+      7          ****************************************************************************/
+      8          #include "hal_types.h"
+      9          #include "hal_lcd.h"
+     10          #include "OSAL.h"
+     11          #include "OnBoard.h"
+     12          #include "hal_assert.h"
+     13          #include <string.h>
+     14          
+     15          #if defined (ZTOOL_P1) || defined (ZTOOL_P2)
+     16            #include "DebugTrace.h"
+     17          #endif
+     18          
+     19          
+     20          //------------------------------------------------------------------------------
+     21          #define LCD_COMMAND 0x00
+     22          #define LCD_DATA    0x01
+     23          
+     24          #define LCD_MAX_BUF 25
+     25          
+     26          #define SOFTWARE_SPI
+     27          //#define HARDWARE_SPI //采用硬件SPI通讯
+     28          
+     29          #define COL_SPACE   2  //字符间距
+     30          #define ROW_SPACE   4  //行间距
+     31          #define ALL_CNS     128
+     32          #define X_MAX_PIXEL 128
+     33          #define Y_MAX_PIXEL 128
+     34          
+     35          // SPI TFT LCD端口定义
+     36          #define LCD_DC           P0_0  // 数据/命令选择
+     37          #define LCD_SDA          P1_3  // 双向数据 
+     38          #define LCD_SCL          P1_2  // 时钟   
+     39          //#define LCD_CS         P1_2  // 片选, L_S 将片选接地
+     40          #define LCD_RST          P1_7  // 控制lcd复位   
+     41          
+     42          //液晶控制口置1操作语句宏定义
+     43          //#define LCD_CS_SET  	(LCD_CS_CLRx01)   
+     44          #define	LCD_DC_SET  	(LCD_DC = 0x01)  
+     45          #define	LCD_SDA_SET  	(LCD_SDA = 0x01)    
+     46          #define	LCD_SCL_SET  	(LCD_SCL = 0x01)   
+     47          #define	LCD_RST_SET  	(LCD_RST = 0x01)  
+     48          
+     49          //液晶控制口置0操作语句宏定义
+     50          //#define LCD_CS_CLR  	(LCD_CS_CLRx00)    
+     51          #define	LCD_DC_CLR  	(LCD_DC = 0x00)  
+     52          #define	LCD_SDA_CLR  	(LCD_SDA = 0x00)     
+     53          #define	LCD_SCL_CLR  	(LCD_SCL = 0x00)
+     54          #define	LCD_RST_CLR  	(LCD_RST = 0x00)   
+     55          
+     56          
+     57          void SPI_Init(void);
+     58          void LCD_clear(unsigned int color);
+     59          void LCD_write_EN_string(unsigned char X,unsigned char Y,uint8 *s);
+     60          static void LCD_set_window(unsigned int X, unsigned int Y, 
+     61                                     unsigned Width,unsigned int Height);
+     62          static void LCD_write_EN(unsigned int X, unsigned int Y, unsigned char c);
+     63          static void LCD_write_CN(unsigned int X, unsigned int Y, unsigned char c);
+     64          
+     65          unsigned int  Color    = BLUE; //默认前景颜色
+     66          unsigned int  Color_BK = GREEN;//默认背景颜色
+     67          //------------------------------------------------------------------------------
+     68          
+     69          #define XLevelL            0x00
+     70          #define XLevelH            0x10
+     71          #define XLevel             ((XLevelH&0x0F)*16+XLevelL)
+     72          #define Max_Column         128
+     73          #define Max_Row            64
+     74          #define Brightness         0xCF 
+     75          #define X_WIDTH            128
+     76          #define Y_WIDTH            64
+     77          
+     78          #define LCD_MAX_BUF        25
+     79          #define HAL_LCD_MAX_CHARS  16   // Max number of chars on a single LCD line 
+     80          
+     81          
+     82          #if (HAL_LCD == TRUE)
+     83          void HalLcd_HW_Init(void);
+     84          void HalLcd_HW_WaitUs(uint16 i);
+     85          void HalLcd_HW_Clear(void);
+     86          void HalLcd_HW_Control(uint8 cmd);
+     87          void HalLcd_HW_Write(uint8 data);
+     88          void HalLcd_HW_SetContrast(uint8 value);
+     89          void HalLcd_HW_WriteChar(uint8 line, uint8 col, char text);
+     90          void HalLcd_HW_WriteLine(uint8 line, const char *pText);
+     91          
+     92          void DelayMS(unsigned int msec);
+     93          void LCD_WrDat(unsigned char dat);
+     94          //void LCD_WrCmd(unsigned char cmd);
+     95          void LCD_Set_Pos(unsigned char x, unsigned char y);
+     96          void LCD_Fill(unsigned char bmp_dat) ;
+     97          void LCD_CLS(void);
+     98          
+     99          //-----------------------------------------------------------------------------
+    100          void DrawRect(unsigned int Xpos, unsigned int Ypos, unsigned int Width, 
+    101                        unsigned int Height,unsigned Color);
+    102          void DrawRectFill(unsigned int Xpos  , unsigned int Ypos, unsigned int Width, 
+    103                            unsigned int Height, unsigned Color);
+    104          void  SendByte(unsigned char Data);
+    105          void  SPI_WriteData(unsigned char Data);
+    106          void LCD_write_byte(unsigned char data, unsigned char command);
+    107          void LCD_WriteData_16Bit(unsigned short Data);
+    108          void LCD_write_CN_string(unsigned char X,unsigned char Y,uint8 *s);
+    109          void ShowImage(const unsigned char *p);
+    110          
+    111          void DrawPixel(unsigned int x, unsigned int y, unsigned int color);
+    112          void DrawVerticalLine(unsigned int x, unsigned int y, 
+    113                                unsigned int Length,unsigned int Color);
+    114          void DrawHorizonLine(unsigned int x, unsigned int y, 
+    115                               unsigned int Length,unsigned int Color);               
+    116          void Lcd_Reset(void);
+    117          
+    118          
+    119          //中文14x14点阵字符索引 ALD
+    120          __code const  unsigned char CN14x14_Index[] =
+    121          {
+    122            "深圳市安联德科技用户登录帐号密码确定取消专业专注无线通讯诚信立足创新致远强大原："
+    123          };
+    124          
+    125          //中文14x14点阵字符 ald
+    126           const unsigned char CN14x14[][28] =
+    127          {
+    128          0x00,0x00,0x4F,0xF8,0x28,0x08,0x02,0x20,0x84,0x10,0x48,0x88,0x00,0x80,0x2F,0xF8,
+    129          0x21,0xC0,0x42,0xA0,0x42,0xA0,0x84,0x90,0x88,0x88,0x00,0x80,/*"深",0*/
+    130          
+    131          0x22,0x08,0x22,0x48,0x22,0x48,0x22,0x48,0xFA,0x48,0x22,0x48,0x22,0x48,0x22,0x48,
+    132          0x22,0x48,0x3A,0x48,0xE2,0x48,0x02,0x48,0x02,0x08,0x04,0x08,/*"圳",1*/
+    133          
+    134          0x04,0x00,0x02,0x00,0xFF,0xF8,0x02,0x00,0x02,0x00,0x7F,0xF0,0x42,0x10,0x42,0x10,
+    135          0x42,0x10,0x42,0x10,0x42,0x10,0x42,0x70,0x02,0x00,0x02,0x00,/*"市",2*/
+    136          
+    137          0x04,0x00,0x02,0x00,0xFF,0xF8,0x80,0x08,0x84,0x08,0x04,0x00,0xFF,0xF8,0x08,0x40,
+    138          0x10,0x40,0x3C,0x80,0x03,0x00,0x04,0xC0,0x18,0x20,0xE0,0x10,/*"安",3*/
+    139          
+    140          0x01,0x10,0xFC,0xA0,0x48,0x00,0x49,0xF0,0x78,0x40,0x48,0x40,0x48,0x40,0x7B,0xF8,
+    141          0x48,0x40,0x48,0x40,0x5C,0xA0,0xE8,0xA0,0x09,0x10,0x0A,0x08,/*"联",4*/
+    142          
+    143          0x10,0x80,0x27,0xF8,0x40,0x80,0x97,0xF0,0x15,0x50,0x25,0x50,0x67,0xF0,0xA0,0x00,
+    144          0x27,0xF0,0x21,0x00,0x20,0x90,0x2A,0x88,0x2A,0x28,0x31,0xE0,/*"德",5*/
+    145          
+    146          0x00,0x20,0x0D,0x20,0x70,0xA0,0x10,0xA0,0x12,0x20,0xFD,0x20,0x11,0x20,0x30,0x38,
+    147          0x3B,0xE0,0x54,0x20,0x90,0x20,0x10,0x20,0x10,0x20,0x10,0x20,/*"科",6*/
+    148          
+    149          0x20,0x80,0x20,0x80,0x20,0x80,0xF7,0xF0,0x20,0x80,0x20,0x80,0x27,0xE0,0x32,0x20,
+    150          0xE2,0x20,0x21,0x40,0x20,0x80,0x21,0x40,0x22,0x20,0xEC,0x18,/*"技",7*/
+    151          
+    152          0x00,0x00,0x3F,0xF8,0x21,0x08,0x21,0x08,0x21,0x08,0x3F,0xF8,0x21,0x08,0x21,0x08,
+    153          0x3F,0xF8,0x21,0x08,0x21,0x08,0x41,0x08,0x41,0x08,0x80,0x38,/*"用",8*/
+    154          
+    155          0x02,0x00,0x01,0x00,0x3F,0xF8,0x20,0x08,0x20,0x08,0x20,0x08,0x3F,0xF8,0x20,0x08,
+    156          0x20,0x00,0x20,0x00,0x20,0x00,0x40,0x00,0x40,0x00,0x80,0x00,/*"户",9*/
+    157          
+    158          0x01,0x20,0x7D,0x40,0x04,0x90,0x28,0xA0,0x10,0x40,0x2F,0xA0,0x40,0x18,0x9F,0xC0,
+    159          0x10,0x40,0x10,0x40,0x1F,0xC0,0x10,0x40,0x08,0x80,0xFF,0xF8,/*"登",10*/
+    160          
+    161          0x00,0x00,0x7F,0xE0,0x00,0x20,0x3F,0xE0,0x00,0x20,0xFF,0xF8,0x02,0x00,0x22,0x20,
+    162          0x13,0x40,0x0A,0x80,0x12,0x40,0x22,0x20,0xC2,0x18,0x0E,0x00,/*"录",11*/
+    163          
+    164          0x21,0x00,0x21,0x10,0x21,0x10,0xF9,0x20,0xA9,0x40,0xA9,0x00,0xAB,0xF8,0xA9,0x40,
+    165          0xA9,0x40,0xA9,0x20,0xB9,0x20,0x21,0x50,0x21,0x88,0x21,0x00,/*"帐",12*/
+    166          
+    167          0x3F,0xE0,0x20,0x20,0x20,0x20,0x3F,0xE0,0x00,0x00,0x00,0x00,0xFF,0xF8,0x08,0x00,
+    168          0x10,0x00,0x3F,0xE0,0x00,0x20,0x00,0x20,0x00,0x20,0x00,0xC0,/*"号",13*/
+    169          
+    170          0x02,0x00,0xFF,0xF8,0x80,0x08,0x04,0x40,0x52,0x90,0x51,0x08,0x92,0x28,0x0F,0xE0,
+    171          0x30,0x00,0xC2,0x00,0x22,0x20,0x22,0x20,0x3F,0xE0,0x00,0x20,/*"密",14*/
+    172          
+    173          0x00,0x00,0x07,0xE0,0xF8,0x20,0x22,0x20,0x22,0x20,0x42,0x20,0x7B,0xF8,0xC8,0x08,
+    174          0x48,0x08,0x4F,0xE8,0x48,0x08,0x78,0x08,0x48,0x08,0x00,0x30,/*"码",15*/
+    175          
+    176          0x01,0x00,0x01,0xF0,0xFA,0x10,0x24,0x20,0x23,0xF8,0x42,0x48,0x7A,0x48,0xCB,0xF8,
+    177          0x4A,0x48,0x4A,0x48,0x4B,0xF8,0x7A,0x48,0x42,0x48,0x04,0x18,/*"确",16*/
+    178          
+    179          0x04,0x00,0x02,0x00,0xFF,0xF8,0x80,0x08,0x00,0x00,0x3F,0xE0,0x02,0x00,0x02,0x00,
+    180          0x22,0x00,0x23,0xE0,0x22,0x00,0x22,0x00,0x52,0x00,0x8F,0xF8,/*"定",17*/
+    181          
+    182          0x00,0x00,0xFC,0x00,0x4B,0xF0,0x49,0x10,0x79,0x10,0x49,0x10,0x49,0x10,0x78,0xA0,
+    183          0x48,0xA0,0x4E,0x40,0xF8,0x40,0x08,0xA0,0x09,0x10,0x0A,0x08,/*"取",18*/
+    184          
+    185          0x00,0x80,0x44,0x90,0x22,0xA0,0x10,0x80,0x07,0xF0,0x84,0x10,0x44,0x10,0x17,0xF0,
+    186          0x14,0x10,0x24,0x10,0x27,0xF0,0x44,0x10,0x44,0x10,0x04,0x70,/*"消",19*/
+    187          
+    188          0x02,0x00,0x02,0x00,0x7F,0xF0,0x04,0x00,0x04,0x00,0xFF,0xF8,0x08,0x00,0x10,0x00,
+    189          0x3F,0xE0,0x00,0x20,0x00,0x40,0x1C,0x80,0x03,0x00,0x00,0x80,/*"专",20*/
+    190          
+    191          0x08,0x80,0x08,0x80,0x08,0x80,0x88,0x90,0x48,0x90,0x48,0x90,0x28,0xA0,0x28,0xA0,
+    192          0x28,0xC0,0x08,0x80,0x08,0x80,0x08,0x80,0x08,0x80,0xFF,0xF8,/*"业",21*/
+    193          
+    194          0x02,0x00,0x02,0x00,0x7F,0xF0,0x04,0x00,0x04,0x00,0xFF,0xF8,0x08,0x00,0x10,0x00,
+    195          0x3F,0xE0,0x00,0x20,0x00,0x40,0x1C,0x80,0x03,0x00,0x00,0x80,/*"专",22*/
+    196          
+    197          0x01,0x00,0x40,0x80,0x20,0x00,0x17,0xF0,0x00,0x80,0x80,0x80,0x40,0x80,0x00,0x80,
+    198          0x17,0xF0,0x10,0x80,0x20,0x80,0x20,0x80,0x40,0x80,0x4F,0xF8,/*"注",23*/
+    199          
+    200          0x00,0x00,0x7F,0xF0,0x02,0x00,0x02,0x00,0x02,0x00,0x02,0x00,0xFF,0xF8,0x05,0x00,
+    201          0x05,0x00,0x09,0x00,0x11,0x00,0x21,0x08,0x41,0x08,0x80,0xF8,/*"无",24*/
+    202          
+    203          0x20,0xA0,0x20,0x90,0x48,0x80,0x48,0xF0,0xF3,0x80,0x10,0x80,0x20,0xB8,0x43,0xC0,
+    204          0xF8,0x90,0x00,0xA0,0x00,0x48,0x18,0xA8,0xE3,0x18,0x00,0x08,/*"线",25*/
+    205          
+    206          0x47,0xF0,0x21,0x20,0x20,0xC0,0x07,0xF0,0x04,0x90,0xE4,0x90,0x27,0xF0,0x24,0x90,
+    207          0x24,0x90,0x27,0xF0,0x24,0x90,0x24,0xB0,0x50,0x00,0x8F,0xF8,/*"通",26*/
+    208          
+    209          0x40,0x00,0x2F,0xE0,0x22,0x20,0x02,0x20,0x02,0x20,0xE2,0x20,0x2F,0xE0,0x22,0x20,
+    210          0x22,0x20,0x22,0x28,0x2A,0x28,0x32,0x28,0x22,0x18,0x02,0x08,/*"讯",27*/
+    211          
+    212          0x40,0x50,0x20,0x48,0x20,0x40,0x07,0xF8,0xE4,0x40,0x24,0x48,0x27,0x48,0x25,0x50,
+    213          0x25,0x50,0x2D,0x20,0x35,0x28,0x2B,0x68,0x08,0x98,0x11,0x08,/*"诚",28*/
+    214          
+    215          0x11,0x00,0x10,0x80,0x2F,0xF8,0x20,0x00,0x67,0xF0,0xA0,0x00,0x27,0xF0,0x20,0x00,
+    216          0x27,0xF0,0x24,0x10,0x24,0x10,0x24,0x10,0x27,0xF0,0x24,0x10,/*"信",29*/
+    217          
+    218          0x04,0x00,0x02,0x00,0x00,0x00,0x7F,0xF0,0x00,0x00,0x00,0x00,0x00,0x20,0x20,0x20,
+    219          0x10,0x40,0x10,0x40,0x08,0x80,0x08,0x80,0x01,0x00,0xFF,0xF8,/*"立",30*/
+    220          
+    221          0x00,0x00,0x3F,0xE0,0x20,0x20,0x20,0x20,0x20,0x20,0x3F,0xE0,0x02,0x00,0x02,0x00,
+    222          0x22,0x00,0x23,0xF0,0x22,0x00,0x22,0x00,0x52,0x00,0x8F,0xF8,/*"足",31*/
+    223          
+    224          0x10,0x10,0x10,0x10,0x28,0x10,0x24,0x90,0x42,0x90,0x80,0x90,0x7C,0x90,0x44,0x90,
+    225          0x44,0x90,0x44,0x90,0x58,0x10,0x42,0x10,0x42,0x10,0x3E,0x70,/*"创",32*/
+    226          
+    227          0x20,0x18,0x10,0xE0,0xFE,0x80,0x44,0x80,0x28,0x80,0xFE,0xF8,0x00,0x90,0x10,0x90,
+    228          0xFE,0x90,0x10,0x90,0x54,0x90,0x92,0x90,0x11,0x10,0x72,0x10,/*"新",33*/
+    229          
+    230          0x00,0x80,0xFE,0x80,0x10,0x80,0x24,0xF8,0x43,0x10,0xFE,0x90,0x12,0x90,0x10,0x90,
+    231          0xFE,0xA0,0x10,0xA0,0x10,0x40,0x1E,0xA0,0xF1,0x10,0x02,0x08,/*"致",34*/
+    232          
+    233          0x00,0x00,0x47,0xE0,0x20,0x00,0x20,0x00,0x00,0x00,0x0F,0xF0,0xE2,0x40,0x22,0x40,
+    234          0x22,0x40,0x22,0x48,0x24,0x48,0x28,0x38,0x50,0x00,0x8F,0xF8,/*"远",35*/
+    235          
+    236          0x00,0x00,0xF3,0xE0,0x12,0x20,0x12,0x20,0xF3,0xE0,0x80,0x80,0x87,0xF0,0x84,0x90,
+    237          0xF4,0x90,0x17,0xF0,0x10,0x80,0x10,0x90,0x1F,0xF8,0x60,0x08,/*"强",36*/
+    238          
+    239          0x02,0x00,0x02,0x00,0x02,0x00,0x02,0x00,0xFF,0xF8,0x02,0x00,0x05,0x00,0x05,0x00,
+    240          0x05,0x00,0x08,0x80,0x08,0x80,0x10,0x40,0x20,0x20,0xC0,0x18,/*"大",37*/
+    241          
+    242          0x3F,0xF8,0x20,0x80,0x21,0x00,0x27,0xF0,0x24,0x10,0x27,0xF0,0x24,0x10,0x27,0xF0,
+    243          0x20,0x80,0x24,0x90,0x24,0x88,0x48,0x88,0x40,0x80,0x83,0x80,/*"原",38*/
+    244          
+    245          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x18,0x00,0x18,0x00,
+    246          0x00,0x00,0x00,0x00,0x18,0x00,0x18,0x00,0x00,0x00,0x00,0x00,/*"：",41*/
+    247          
+    248          };
+    249          
+    250          //英文7x14点阵字符 andy
+    251          __code const unsigned char ASCII7x14[][14] =
+    252          {
+    253          {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00},//" ",0//
+    254          {0x00,0x00,0x10,0x10,0x10,0x10,0x10,0x10,0x00,0x00,0x30,0x30,0x00,0x00},//"!",1//
+    255          {0x00,0x14,0x28,0x50,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00},//""",2//
+    256          {0x00,0x00,0x00,0x28,0x28,0xFC,0x28,0x48,0x50,0xFC,0x50,0x50,0x00,0x00},//"#",3//
+    257          {0x00,0x00,0x10,0x38,0x54,0x54,0x30,0x18,0x14,0x54,0x54,0x38,0x10,0x00},//"$",4//
+    258          {0x00,0x00,0x00,0x44,0xA8,0xA8,0xB0,0x54,0x1A,0x2A,0x2A,0x44,0x00,0x00},//"%",5//
+    259          {0x00,0x00,0x00,0x20,0x50,0x50,0x60,0xAC,0xA8,0x98,0x92,0x7C,0x00,0x00},//"&",6//
+    260          {0x00,0x60,0x60,0x20,0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00},//"'",7//
+    261          {0x00,0x04,0x08,0x08,0x10,0x10,0x10,0x10,0x10,0x10,0x08,0x08,0x04,0x00},//"(",8//
+    262          {0x00,0x00,0x40,0x20,0x10,0x08,0x04,0x08,0x10,0x20,0x40,0x00,0x00,0x00},//">",9//
+    263          {0x00,0x00,0x00,0x10,0x10,0xD6,0x38,0x38,0xD6,0x10,0x10,0x00,0x00,0x00},//"*",10//
+    264          {0x00,0x00,0x00,0x10,0x10,0x10,0xFE,0x10,0x10,0x10,0x00,0x00,0x00,0x00},//"+",11//
+    265          {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x60,0x60,0x20,0xC0},//",",12//
+    266          {0x00,0x00,0x00,0x00,0x00,0x00,0xFC,0x00,0x00,0x00,0x00,0x00,0x00,0x00},//"-",13//
+    267          {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x60,0x60,0x00,0x00},//".",14//
+    268          {0x00,0x02,0x04,0x04,0x04,0x08,0x08,0x10,0x10,0x20,0x20,0x20,0x40,0x00},//"/",15//
+    269          {0x00,0x00,0x00,0x30,0x48,0x84,0x84,0x84,0x84,0x84,0x48,0x30,0x00,0x00},//"0",16//
+    270          {0x00,0x00,0x00,0x10,0x70,0x10,0x10,0x10,0x10,0x10,0x10,0x7C,0x00,0x00},//"1",17//
+    271          {0x00,0x00,0x00,0x38,0x44,0x44,0x04,0x08,0x10,0x20,0x44,0x7C,0x00,0x00},//"2",18//
+    272          {0x00,0x00,0x00,0x38,0x44,0x44,0x18,0x04,0x04,0x44,0x44,0x38,0x00,0x00},//"3",19//
+    273          {0x00,0x00,0x08,0x08,0x18,0x28,0x48,0x48,0x88,0x7C,0x08,0x1C,0x00,0x00},//"4",20//
+    274          {0x00,0x00,0x00,0x7C,0x40,0x40,0x78,0x44,0x04,0x44,0x44,0x38,0x00,0x00},//"5",21//
+    275          {0x00,0x00,0x00,0x3C,0x44,0x80,0xB8,0xC4,0x84,0x84,0x84,0x78,0x00,0x00},//"6",22//
+    276          {0x00,0x00,0x00,0x7C,0x44,0x48,0x08,0x10,0x10,0x10,0x10,0x10,0x00,0x00},//"7",23//
+    277          {0x00,0x00,0x00,0x78,0x84,0x84,0x48,0x78,0x84,0x84,0x84,0x78,0x00,0x00},//"8",24//
+    278          {0x00,0x00,0x00,0x78,0x84,0x84,0x84,0x8C,0x74,0x04,0x88,0xF0,0x00,0x00},//"9",25//
+    279          {0x00,0x00,0x00,0x00,0x00,0x30,0x30,0x00,0x00,0x00,0x30,0x30,0x00,0x00},//":",26//
+    280          {0x00,0x00,0x00,0x00,0x00,0x00,0x10,0x00,0x00,0x00,0x00,0x10,0x10,0x20},//";",27//
+    281          {0x00,0x00,0x04,0x08,0x10,0x20,0x40,0x20,0x10,0x08,0x04,0x00,0x00,0x00},//"<",28//
+    282          {0x00,0x00,0x00,0x00,0x00,0xFC,0x00,0x00,0xFC,0x00,0x00,0x00,0x00,0x00},//"=",29//
+    283          {0x00,0x00,0x40,0x20,0x10,0x08,0x04,0x08,0x10,0x20,0x40,0x00,0x00,0x00},//">",30//
+    284          {0x00,0x00,0x78,0x84,0x84,0x84,0x08,0x10,0x10,0x00,0x30,0x30,0x00,0x00},//"?",31//
+    285          {0x00,0x00,0x00,0x38,0x44,0x9A,0xAA,0xAA,0xAA,0xB4,0x42,0x3C,0x00,0x00},//"@",32//
+    286          {0x00,0x00,0x00,0x10,0x10,0x28,0x28,0x28,0x38,0x44,0x44,0xEE,0x00,0x00},//"A",33//
+    287          {0x00,0x00,0x00,0xF8,0x44,0x44,0x78,0x44,0x44,0x44,0x44,0xF8,0x00,0x00},//"B",34//
+    288          {0x00,0x00,0x00,0x3C,0x44,0x84,0x80,0x80,0x80,0x80,0x44,0x38,0x00,0x00},//"C",35//
+    289          {0x00,0x00,0x00,0xF0,0x48,0x44,0x44,0x44,0x44,0x44,0x48,0xF0,0x00,0x00},//"D",36//
+    290          {0x00,0x00,0x00,0xFC,0x44,0x40,0x48,0x78,0x48,0x40,0x44,0xFC,0x00,0x00},//"E",37//
+    291          {0x00,0x00,0x00,0xFC,0x42,0x40,0x48,0x78,0x48,0x40,0x40,0xE0,0x00,0x00},//"F",38//
+    292          {0x00,0x00,0x00,0x3C,0x44,0x84,0x80,0x80,0x8E,0x84,0x44,0x38,0x00,0x00},//"G",39//
+    293          {0x00,0x00,0x00,0xEE,0x44,0x44,0x44,0x7C,0x44,0x44,0x44,0xEE,0x00,0x00},//"H",40//
+    294          {0x00,0x00,0x00,0x7C,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x7C,0x00,0x00},//"I",41//
+    295          {0x00,0x00,0x00,0x7C,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x90,0xE0},//"J",42//
+    296          {0x00,0x00,0x00,0xEE,0x44,0x48,0x50,0x70,0x48,0x48,0x44,0xEE,0x00,0x00},//"K",43//
+    297          {0x00,0x00,0x00,0xE0,0x40,0x40,0x40,0x40,0x40,0x40,0x44,0xFC,0x00,0x00},//"L",44//
+    298          {0x00,0x00,0x00,0xEE,0x6C,0x6C,0x6C,0x54,0x54,0x54,0x54,0xD6,0x00,0x00},//"M",45//
+    299          {0x00,0x00,0x00,0xEE,0x64,0x64,0x54,0x54,0x54,0x4C,0x4C,0xE4,0x00,0x00},//"N",46//
+    300          {0x00,0x00,0x00,0x30,0x48,0x84,0x84,0x84,0x84,0x84,0x48,0x30,0x00,0x00},//"O",47//
+    301          {0x00,0x00,0x00,0xF8,0x44,0x44,0x44,0x78,0x40,0x40,0x40,0xE0,0x00,0x00},//"P",48//
+    302          {0x00,0x00,0x00,0x30,0x48,0x84,0x84,0x84,0x84,0xB4,0x48,0x38,0x0C,0x00},//"Q",49//
+    303          {0x00,0x00,0x00,0xF8,0x44,0x44,0x78,0x50,0x48,0x48,0x44,0xE6,0x00,0x00},//"R",50//
+    304          {0x00,0x00,0x00,0x3C,0x44,0x40,0x20,0x18,0x04,0x04,0x44,0x78,0x00,0x00},//"S",51//
+    305          {0x00,0x00,0x00,0xFE,0x92,0x10,0x10,0x10,0x10,0x10,0x10,0x38,0x00,0x00},//"T",52//
+    306          {0x00,0x00,0x00,0xEE,0x44,0x44,0x44,0x44,0x44,0x44,0x44,0x38,0x00,0x00},//"U",53//
+    307          {0x00,0x00,0x00,0xEE,0x44,0x44,0x28,0x28,0x28,0x28,0x10,0x10,0x00,0x00},//"V",54//
+    308          {0x00,0x00,0x00,0xD6,0x54,0x54,0x54,0x54,0x6C,0x28,0x28,0x28,0x00,0x00},//"W",55//
+    309          {0x00,0x00,0x00,0xEE,0x44,0x28,0x28,0x10,0x28,0x28,0x44,0xEE,0x00,0x00},//"X",56//
+    310          {0x00,0x00,0x00,0xEE,0x44,0x28,0x28,0x10,0x10,0x10,0x10,0x38,0x00,0x00},//"Y",57//
+    311          {0x00,0x00,0x00,0x7C,0x88,0x08,0x10,0x20,0x20,0x40,0x44,0xFC,0x00,0x00},//"Z",58//
+    312          {0x00,0x1C,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x1C,0x00},//"[",59//
+    313          {0x00,0x70,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x70,0x00},//"]",60//
+    314          {0x00,0x70,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x70,0x00},//"]",61//
+    315          {0x00,0x10,0x28,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00},//"^",62//
+    316          {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xFE},//"_",63//
+    317          {0x00,0x60,0x60,0x20,0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00},//"'",64//
+    318          {0x00,0x00,0x00,0x00,0x00,0x00,0x38,0x44,0x1C,0x24,0x44,0x3E,0x00,0x00},//"a",65//
+    319          {0x00,0x00,0x00,0xC0,0x40,0x40,0x78,0x44,0x44,0x44,0x44,0x78,0x00,0x00},//"b",66//
+    320          {0x00,0x00,0x00,0x00,0x00,0x00,0x3C,0x44,0x40,0x40,0x44,0x38,0x00,0x00},//"c",67//
+    321          {0x00,0x00,0x00,0x0C,0x04,0x04,0x3C,0x44,0x44,0x44,0x44,0x3E,0x00,0x00},//"d",68//
+    322          {0x00,0x00,0x00,0x00,0x00,0x00,0x38,0x44,0x7C,0x40,0x44,0x38,0x00,0x00},//"e",69//
+    323          {0x00,0x00,0x00,0x1C,0x24,0x20,0xF8,0x20,0x20,0x20,0x20,0x78,0x00,0x00},//"f",70//
+    324          {0x00,0x00,0x00,0x00,0x00,0x00,0x3C,0x48,0x48,0x30,0x40,0x78,0x44,0x38},//"g",71//
+    325          {0x00,0x00,0x00,0xC0,0x40,0x40,0x58,0x64,0x44,0x44,0x44,0xEE,0x00,0x00},//"h",72//
+    326          {0x00,0x00,0x00,0x10,0x00,0x00,0x70,0x10,0x10,0x10,0x10,0x7C,0x00,0x00},//"i",73//
+    327          {0x00,0x00,0x00,0x08,0x00,0x00,0x38,0x08,0x08,0x08,0x08,0x08,0x08,0x70},//"j",74//
+    328          {0x00,0x00,0x00,0xC0,0x40,0x40,0x5C,0x48,0x50,0x70,0x48,0xEC,0x00,0x00},//"k",75//
+    329          {0x00,0x00,0x00,0x70,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x7C,0x00,0x00},//"l",76//
+    330          {0x00,0x00,0x00,0x00,0x00,0x00,0xF8,0x54,0x54,0x54,0x54,0xD6,0x00,0x00},//"m",77//
+    331          {0x00,0x00,0x00,0x00,0x00,0x00,0xD8,0x64,0x44,0x44,0x44,0xEE,0x00,0x00},//"n",78//
+    332          {0x00,0x00,0x00,0x00,0x00,0x00,0x38,0x44,0x44,0x44,0x44,0x38,0x00,0x00},//"o",79//
+    333          {0x00,0x00,0x00,0x00,0x00,0x00,0xF8,0x44,0x44,0x44,0x44,0x78,0x40,0xE0},//"p",80//
+    334          {0x00,0x00,0x00,0x00,0x00,0x00,0x3C,0x44,0x44,0x44,0x44,0x3C,0x04,0x0E},//"q",81//
+    335          {0x00,0x00,0x00,0x00,0x00,0x00,0xEC,0x30,0x20,0x20,0x20,0xF8,0x00,0x00},//"r",82//
+    336          {0x00,0x00,0x00,0x00,0x00,0x00,0x3C,0x44,0x30,0x08,0x44,0x78,0x00,0x00},//"s",83//
+    337          {0x00,0x00,0x00,0x00,0x10,0x10,0x7C,0x10,0x10,0x10,0x10,0x0C,0x00,0x00},//"t",84//
+    338          {0x00,0x00,0x00,0x00,0x00,0x00,0xCC,0x44,0x44,0x44,0x44,0x3E,0x00,0x00},//"u",85//
+    339          {0x00,0x00,0x00,0x00,0x00,0x00,0xEE,0x44,0x28,0x28,0x28,0x10,0x00,0x00},//"v",86//
+    340          {0x00,0x00,0x00,0x00,0x00,0x00,0xD6,0x54,0x54,0x54,0x28,0x28,0x00,0x00},//"w",87//
+    341          {0x00,0x00,0x00,0x00,0x00,0x00,0xDC,0x48,0x30,0x30,0x48,0xEC,0x00,0x00},//"x",88//
+    342          {0x00,0x00,0x00,0x00,0x00,0x00,0xEE,0x44,0x28,0x28,0x10,0x10,0x20,0xE0},//"y",89//
+    343          {0x00,0x00,0x00,0x00,0x00,0x00,0x7C,0x48,0x10,0x10,0x24,0x7C,0x00,0x00},//"z",90//
+    344          {0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10},//"|",91//
+    345          };
+    346          //-----------------------------------------------------------------------------
+    347          #endif //LCD
+    348          
+    349          
+    350          /**************************************************************************************************
+    351           * @fn      HalLcdInit
+    352           *
+    353           * @brief   Initilize LCD Service
+    354           *
+    355           * @param   init - pointer to void that contains the initialized value
+    356           *
+    357           * @return  None
+    358           **************************************************************************************************/
+    359          void HalLcdInit(void)
+    360          {
+    361          #if (HAL_LCD == TRUE)
+    362            HalLcd_HW_Init();
+    363          #endif
+    364          }
+    365          
+    366          /**************************************************************************************************
+    367           * @fn      HalLcdWriteValue
+    368           *
+    369           * @brief   Write a value to the LCD
+    370           *
+    371           * @param   value  - value that will be displayed
+    372           *          radix  - 8, 10, 16
+    373           *          option - display options
+    374           *
+    375           * @return  None
+    376           **************************************************************************************************/
+    377          void HalLcdWriteValue ( uint32 value, const uint8 radix, uint8 option)
+    378          {
+    379          #if (HAL_LCD == TRUE)
+    380            uint8 buf[LCD_MAX_BUF];
+    381          
+    382            _ltoa( value, &buf[0], radix );
+    383            HalLcdWriteString( (char*)buf, option );
+    384          #endif
+    385          }
+    386          
+    387          /**************************************************************************************************
+    388           * @fn      HalLcdWriteScreen
+    389           *
+    390           * @brief   Write a value to the LCD
+    391           *
+    392           * @param   line1  - string that will be displayed on line 1
+    393           *          line2  - string that will be displayed on line 2
+    394           *
+    395           * @return  None
+    396           **************************************************************************************************/
+    397          void HalLcdWriteScreen( char *line1, char *line2 )
+    398          {
+    399          #if (HAL_LCD == TRUE)
+    400            HalLcdWriteString( line1, 0 );//andy 
+    401            HalLcdWriteString( line2, 1 );
+    402          #endif
+    403          }
+    404          
+    405          /**************************************************************************************************
+    406           * @fn      HalLcdWriteStringValue
+    407           *
+    408           * @brief   Write a string followed by a value to the LCD
+    409           *
+    410           * @param   title  - Title that will be displayed before the value
+    411           *          value  - value
+    412           *          format - redix
+    413           *          line   - line number
+    414           *
+    415           * @return  None
+    416           **************************************************************************************************/
+    417          void HalLcdWriteStringValue( char *title, uint16 value, uint8 format, uint8 line )
+    418          {
+    419          #if (HAL_LCD == TRUE)
+    420            uint8 tmpLen;
+    421            uint8 buf[LCD_MAX_BUF];
+    422            uint32 err;
+    423          
+    424            tmpLen = (uint8)osal_strlen( (char*)title );
+    425            osal_memcpy( buf, title, tmpLen );
+    426            //buf[tmpLen] = ' ';
+    427            err = (uint32)(value);
+    428            _ltoa( err, &buf[tmpLen], format );
+    429            HalLcdWriteString( (char*)buf, line );		
+    430          #endif
+    431          }
+    432          
+    433          /**************************************************************************************************
+    434           * @fn      HalLcdWriteStringValue
+    435           *
+    436           * @brief   Write a string followed by a value to the LCD
+    437           *
+    438           * @param   title   - Title that will be displayed before the value
+    439           *          value1  - value #1
+    440           *          format1 - redix of value #1
+    441           *          value2  - value #2
+    442           *          format2 - redix of value #2
+    443           *          line    - line number
+    444           *
+    445           * @return  None
+    446           **************************************************************************************************/
+    447          void HalLcdWriteStringValueValue( char *title, uint16 value1, uint8 format1,
+    448                                            uint16 value2, uint8 format2, uint8 line )
+    449          {
+    450          #if (HAL_LCD == TRUE)
+    451          
+    452            uint8 tmpLen;
+    453            uint8 buf[LCD_MAX_BUF];
+    454            uint32 err;
+    455          
+    456            tmpLen = (uint8)osal_strlen( (char*)title );
+    457            if ( tmpLen )
+    458            {
+    459              osal_memcpy( buf, title, tmpLen );
+    460              //buf[tmpLen++] = ' ';
+    461            }
+    462          
+    463            err = (uint32)(value1);
+    464            _ltoa( err, &buf[tmpLen], format1 );
+    465            tmpLen = (uint8)osal_strlen( (char*)buf );
+    466          
+    467            buf[tmpLen++] = ',';
+    468            buf[tmpLen++] = ' ';
+    469            err = (uint32)(value2);
+    470            _ltoa( err, &buf[tmpLen], format2 );
+    471          
+    472            HalLcdWriteString( (char *)buf, line );		
+    473          
+    474          #endif
+    475          }
+    476          
+    477          #if (HAL_LCD == TRUE)
+    478          void DelayMS(unsigned int msec)
+    479          { 
+    480            unsigned int i;
+    481            while(msec >0)
+    482            {
+    483              for (i=0; i<8000; i++) asm("NOP"); //1ms
+    484              msec--;
+    485            }  
+    486          }
+    487          
+    488          //option 1=第1行  2=第2行 其它类推
+    489          void HalLcdWriteString (char *s, uint8 option)
+    490          {  
+    491            Color = BLUE;
+    492            Color_BK = WHITE; 
+    493            DrawRectFill(7,option*15+20,118,15,WHITE); 
+    494            LCD_write_EN_string(7,option*15+20,(unsigned char *)s);
+    495          }
+    496          
+    497          //向SPI总线传输一个8位数据
+    498          void SendByte(unsigned char Data)
+    499          {
+    500            unsigned char i=0;
+    501            
+    502            for(i=8;i>0;i--)
+    503            {
+    504              if(Data&0x80)	
+    505                LCD_SDA_SET;//输出数据
+    506              else 
+    507                LCD_SDA_CLR;
+    508              
+    509              LCD_SCL_CLR;       
+    510              LCD_SCL_SET;
+    511              Data<<=1; 
+    512            }
+    513          }
+    514          
+    515          //向SPI总线传输一个8位数据
+    516          void  SPI_WriteData(unsigned char Data)
+    517          {
+    518            unsigned char i=0;
+    519            
+    520            for(i=8;i>0;i--)
+    521            {
+    522              if(Data&0x80)	
+    523                LCD_SDA_SET;//输出数据
+    524              else 
+    525                LCD_SDA_CLR;
+    526              
+    527              LCD_SCL_CLR;       
+    528              LCD_SCL_SET;
+    529              Data<<=1; 
+    530            }
+    531          }
+    532          
+    533          //向液晶屏写一个8位指令
+    534          //void LCD_WrCmd(unsigned char Index)
+    535          //{ 
+    536          //  //LCD_CS_CLR;  //ALD del  SPI写命令时序开始
+    537          //  LCD_DC_CLR;
+    538          //  SPI_WriteData(Index);
+    539          //  //LCD_CS_SET;  //ALD del
+    540          //}
+    541          
+    542          ////向液晶屏写一个8位数据
+    543          //void LCD_WrDat(unsigned char Data)
+    544          //{
+    545          //  //LCD_CS_CLR;  //ALD del
+    546          //  LCD_DC_SET;
+    547          //  SPI_WriteData(Data);
+    548          //  //LCD_CS_SET;  //ALD del 
+    549          //}
+    550          
+    551          //向液晶屏写一个16位数据
+    552          void LCD_WriteData_16Bit(unsigned short Data)
+    553          {
+    554            //LCD_CS_CLR;  //ALD del
+    555            LCD_DC_SET;
+    556            SPI_WriteData(Data>>8); //写入高8位数据
+    557            SPI_WriteData(Data); 	  //写入低8位数据
+    558            //LCD_CS_SET;  //ALD del 
+    559          }
+    560          
+    561          /****************************************************************************
+    562          * 名    称: LCD_write_byte()
+    563          * 功    能: 数据到LCD 
+    564          * 入口参数: data    —写入的数据
+    565          *           command —写数据/命令选择  
+    566          * 出口参数: 无 
+    567          ****************************************************************************/
+    568          static void LCD_write_byte(unsigned char data, unsigned char command)
+    569          {
+    570            ////LCD_CS_CLR ;// 使能LCD
+    571            if (command == 0)
+    572              LCD_WrCmd(data); // 传送命令
+                     ^
+Error[Pe223]: function "LCD_WrCmd" declared implicitly
+    573            else
+    574              LCD_WrDat(data) ; // 传送数据
+    575            //SendByte(data);
+    576            //LCD_CS_SET; // 关闭LCD
+    577            //LCD_DC_SET;	
+    578          }
+    579          
+    580          // 复位lcd
+    581          void Lcd_Reset(void)
+    582          {
+    583            LCD_RST_CLR;
+    584            DelayMS(110);
+    585            LCD_RST_SET;
+    586            DelayMS(50);
+    587          }
+    588          
+    589          /****************************************************************************
+    590          * 名    称: LCD_set_window()
+    591          * 功    能: 设置显示窗口
+    592          * 入口参数: X - 显示窗口左上角横坐标      Y —显示窗口左上角纵坐标
+    593          *           Width —显示窗口宽度          Height —显示窗口高度
+    594          * 出口参数: 无
+    595          ****************************************************************************/
+    596          static void LCD_set_window(unsigned int X    , unsigned int Y, 
+    597                                     unsigned int Width, unsigned int Height)
+    598          {
+    599            LCD_write_byte(0x2A,LCD_COMMAND);         //列地址设置命令
+    600            LCD_write_byte(X>>8,LCD_DATA) ;           //设置显示窗口左上角横坐标高位
+    601            LCD_write_byte((X+2)&0xFF,LCD_DATA);      //设置显示窗口左上角横坐标低位 	
+    602            LCD_write_byte((X+Width+1)>>8,LCD_DATA);  //设置宽度高位 	
+    603            LCD_write_byte((X+Width+1)&0xFF,LCD_DATA);// 设置宽度低位 	
+    604            
+    605            LCD_write_byte(0x2B,LCD_COMMAND);         //行地址设置命令
+    606            LCD_write_byte(Y>>8,LCD_DATA) ;           //设置显示窗口左上角纵坐标高位
+    607            LCD_write_byte((Y+3)&0xFF,LCD_DATA);      //设置显示窗口左上角纵坐标低位 
+    608            LCD_write_byte((Y+Height+2)>>8,LCD_DATA); // 设置显示窗口高度高位 	
+    609            LCD_write_byte((Y+Height+2)&0xFF,LCD_DATA);// 设置显示窗口高度低位 	  
+    610            LCD_write_byte(0x2C,LCD_COMMAND) ;
+    611          }
+    612          
+    613          /****************************************************************************
+    614          * 名    称: DrawPixel()
+    615          * 功    能: 在指定位置以指定颜色显示像素
+    616          ****************************************************************************/
+    617          void DrawPixel(unsigned int x, unsigned int y, unsigned int color)
+    618          {
+    619            //LCD_set_XY(x,y);  //设定显示位置 andy
+    620            LCD_write_byte(color>>8,LCD_DATA);  //发送显示颜色数据高位字节
+    621            LCD_write_byte(color&0xFF,LCD_DATA);//发送显示颜色数据低位字节
+    622          }
+    623          
+    624          /****************************************************************************
+    625          * 名    称: DrawVerticalLine()
+    626          * 功    能: 在指定位置以指定颜色画垂直线
+    627          * 入口参数: X - 垂直线起始位置横坐标      Y —垂直线起始位置纵坐标
+    628          *           Length —垂直线长度           Color —垂直线颜色
+    629          * 出口参数: 无
+    630          ****************************************************************************/
+    631          void DrawVerticalLine(unsigned int x, unsigned int y, 
+    632                                unsigned int Length,unsigned int Color)               
+    633          {
+    634            register int  index = 0;
+    635            register char ch,cl;
+    636            
+    637            ch = (unsigned char)(Color>>8);
+    638            cl = (unsigned char)(Color);
+    639            LCD_set_window(x,y,1,Length);
+    640            for(index=0;index<Length;index++)
+    641            {
+    642            LCD_write_byte(ch,LCD_DATA) ;
+    643            LCD_write_byte(cl,LCD_DATA) ;
+    644            }
+    645          }
+    646          
+    647          /****************************************************************************
+    648          * 名    称: DrawHorizonLine()
+    649          * 功    能: 在指定位置以指定颜色画水平线
+    650          * 入口参数: X - 水平线起始位置横坐标      Y —水平线起始位置纵坐标
+    651          *           Length —水平线长度           Color —水平线颜色
+    652          * 出口参数: 无
+    653          ****************************************************************************/
+    654          void DrawHorizonLine(unsigned int x, unsigned int y, 
+    655                               unsigned int Length,unsigned int Color)               
+    656          {
+    657            register int  index = 0;
+    658            register char ch,cl;
+    659            
+    660            ch = (unsigned char)(Color>>8);
+    661            cl = (unsigned char)(Color);
+    662            LCD_set_window(x,y,Length,1);
+    663            for(index=0;index<Length;index++)
+    664            {
+    665              LCD_write_byte(ch,LCD_DATA);
+    666              LCD_write_byte(cl,LCD_DATA);
+    667            }
+    668          }
+    669          
+    670          /****************************************************************************
+    671          * 名    称: DrawRect()
+    672          * 功    能: 在指定位置以指定颜色画矩形
+    673          * 入口参数: X - 矩形起始位置横坐标      Y —矩形起始位置纵坐标
+    674          *           Width  —矩形宽度           Height —矩形高度                   
+    675          *           Color  —矩形颜色             
+    676          * 出口参数: 无
+    677          ****************************************************************************/
+    678          void DrawRect(unsigned int Xpos, unsigned int Ypos, unsigned int Width, 
+    679                        unsigned int Height,unsigned Color)
+    680          {
+    681            DrawHorizonLine(Xpos, Ypos, Width, Color) ;
+    682            DrawHorizonLine(Xpos, (Ypos + Height), Width, Color) ;
+    683            DrawVerticalLine(Xpos, Ypos, Height, Color) ;
+    684            DrawVerticalLine((Xpos+Width-1) ,Ypos, Height, Color);
+    685          }
+    686          
+    687          /****************************************************************************
+    688          * 名    称: DrawRectFill()
+    689          * 功    能: 在指定位置以指定颜色画矩形
+    690          * 入口参数: X - 矩形起始位置横坐标      Y —矩形起始位置纵坐标
+    691          *           Width  —矩形宽度           Height —矩形高度                   
+    692          *           Color  —矩形填充颜色             
+    693          * 出口参数: 无
+    694          ****************************************************************************/
+    695          void DrawRectFill(unsigned int Xpos  , unsigned int Ypos, unsigned int Width, 
+    696                            unsigned int Height, unsigned Color                        )
+    697          {
+    698            register unsigned int i;
+    699            register unsigned int index = Width*Height/16+1;
+    700            register char ch,cl;
+    701            
+    702            ch = (unsigned char)(Color>>8);
+    703            cl = (unsigned char)(Color);
+    704            LCD_set_window(Xpos,Ypos,Width,Height);
+    705            LCD_write_byte(0x2C,LCD_COMMAND);
+    706            //LCD_CS_CLR ; andy
+    707            LCD_DC_SET ;
+    708            for(i=0;i<index;i++)
+    709            {
+    710                SendByte(ch);
+    711                SendByte(cl);
+    712                SendByte(ch);
+    713                SendByte(cl); 
+    714                SendByte(ch);
+    715                SendByte(cl);      
+    716                SendByte(ch);
+    717                SendByte(cl);
+    718                SendByte(ch);
+    719                SendByte(cl);
+    720                SendByte(ch);
+    721                SendByte(cl);
+    722                SendByte(ch);
+    723                SendByte(cl);
+    724                SendByte(ch);
+    725                SendByte(cl);
+    726                SendByte(ch);
+    727                SendByte(cl);
+    728                SendByte(ch);
+    729                SendByte(cl);
+    730                SendByte(ch);
+    731                SendByte(cl);
+    732                SendByte(ch);
+    733                SendByte(cl);
+    734                SendByte(ch);
+    735                SendByte(cl);
+    736                SendByte(ch);
+    737                SendByte(cl);
+    738                SendByte(ch);
+    739                SendByte(cl);
+    740                SendByte(ch);
+    741                SendByte(cl);
+    742            }    
+    743          }
+    744          
+    745          /****************************************************************************
+    746          * 名    称: LCD_clear()
+    747          * 功    能: 以指定颜色清屏
+    748          * 入口参数: color —清屏颜色
+    749          * 出口参数: 无
+    750          ****************************************************************************/
+    751          void LCD_clear(unsigned int color)
+    752          {
+    753            register unsigned int  i=0,j=0;
+    754            register unsigned char ch;
+    755            register unsigned char cl;
+    756            
+    757            LCD_set_window(0,0,X_MAX_PIXEL,Y_MAX_PIXEL);
+    758            ch = color>>8;
+    759            cl = color&0xFF;
+    760            LCD_write_byte(0x2C,LCD_COMMAND);
+    761            //LCD_CS_CLR;
+    762            LCD_DC_SET;
+    763            for (i=0;i<Y_MAX_PIXEL;i++)
+    764              for (j=0;j<2;j++)
+    765              {
+    766                SendByte(ch);
+    767                SendByte(cl);
+    768                SendByte(ch);
+    769                SendByte(cl);
+    770                SendByte(ch);
+    771                SendByte(cl);
+    772                SendByte(ch);
+    773                SendByte(cl);
+    774                SendByte(ch);
+    775                SendByte(cl);
+    776                SendByte(ch);
+    777                SendByte(cl);
+    778                SendByte(ch);
+    779                SendByte(cl);
+    780                SendByte(ch);
+    781                SendByte(cl);
+    782                SendByte(ch);
+    783                SendByte(cl);
+    784                SendByte(ch);
+    785                SendByte(cl);
+    786                SendByte(ch);
+    787                SendByte(cl);
+    788                SendByte(ch);
+    789                SendByte(cl);
+    790                SendByte(ch);
+    791                SendByte(cl);
+    792                SendByte(ch);
+    793                SendByte(cl);
+    794                SendByte(ch);
+    795                SendByte(cl);
+    796                SendByte(ch);
+    797                SendByte(cl);
+    798                SendByte(ch);
+    799                SendByte(cl);
+    800                SendByte(ch);
+    801                SendByte(cl);
+    802                SendByte(ch);
+    803                SendByte(cl);
+    804                SendByte(ch);
+    805                SendByte(cl);
+    806                SendByte(ch);
+    807                SendByte(cl);
+    808                SendByte(ch);
+    809                SendByte(cl);
+    810                SendByte(ch);
+    811                SendByte(cl);
+    812                SendByte(ch);
+    813                SendByte(cl);
+    814                SendByte(ch);
+    815                SendByte(cl);
+    816                SendByte(ch);
+    817                SendByte(cl);
+    818                SendByte(ch);
+    819                SendByte(cl);
+    820                SendByte(ch);
+    821                SendByte(cl);
+    822                SendByte(ch);
+    823                SendByte(cl);
+    824                SendByte(ch);
+    825                SendByte(cl);
+    826                SendByte(ch);
+    827                SendByte(cl);
+    828                SendByte(ch);
+    829                SendByte(cl);      
+    830                SendByte(ch);
+    831                SendByte(cl);
+    832                SendByte(ch);
+    833                SendByte(cl);
+    834                SendByte(ch);
+    835                SendByte(cl);
+    836                SendByte(ch);
+    837                SendByte(cl);
+    838                SendByte(ch);
+    839                SendByte(cl);
+    840                SendByte(ch);
+    841                SendByte(cl);
+    842                SendByte(ch);
+    843                SendByte(cl);
+    844                SendByte(ch);
+    845                SendByte(cl);
+    846                SendByte(ch);
+    847                SendByte(cl);
+    848                SendByte(ch);
+    849                SendByte(cl);
+    850                SendByte(ch);
+    851                SendByte(cl);
+    852                SendByte(ch);
+    853                SendByte(cl);
+    854                SendByte(ch);
+    855                SendByte(cl);
+    856                SendByte(ch);
+    857                SendByte(cl);
+    858                SendByte(ch);
+    859                SendByte(cl);
+    860                SendByte(ch);
+    861                SendByte(cl);
+    862                SendByte(ch);
+    863                SendByte(cl);
+    864                SendByte(ch);
+    865                SendByte(cl);
+    866                SendByte(ch);
+    867                SendByte(cl);
+    868                SendByte(ch);
+    869                SendByte(cl);
+    870                SendByte(ch);
+    871                SendByte(cl);
+    872                SendByte(ch);
+    873                SendByte(cl);
+    874                SendByte(ch);
+    875                SendByte(cl);
+    876                SendByte(ch);
+    877                SendByte(cl);
+    878                SendByte(ch);
+    879                SendByte(cl);
+    880                SendByte(ch);
+    881                SendByte(cl);
+    882                SendByte(ch);
+    883                SendByte(cl);
+    884                SendByte(ch);
+    885                SendByte(cl);
+    886                SendByte(ch);
+    887                SendByte(cl);
+    888                SendByte(ch);
+    889                SendByte(cl);
+    890                SendByte(ch);
+    891                SendByte(cl);
+    892                SendByte(ch);
+    893                SendByte(cl);
+    894              }
+    895            LCD_DC_SET;
+    896            //LCD_CS_SET;
+    897          }
+    898          
+    899          /****************************************************************************
+    900          * 名    称: LCD_write_EN()
+    901          * 功    能: 在指定位置显示 7 ×14 点阵ASCII字符 
+    902          * 入口参数: X - 显示位置左上角横坐标      Y —显示位置左上角纵坐标
+    903          *           c —显示字符                  
+    904          * 出口参数: 无
+    905          ****************************************************************************/
+    906          static void LCD_write_EN(unsigned int X, unsigned int Y, unsigned char c)
+    907          {
+    908            unsigned char i,j,temp;
+    909            
+    910            LCD_set_window(X,Y,7,14);
+    911            //LCD_CS_CLR ;
+    912            LCD_DC_SET ;
+    913            for(i=0;i<14;i++)
+    914            {
+    915              temp = ASCII7x14[c-32][i];
+    916              for(j=0;j<7;j++)
+    917              {
+    918                if(temp&0x80)
+    919                {
+    920                  SendByte(Color>>8);  
+    921                  SendByte(Color) ;
+    922                }
+    923                else
+    924                {
+    925                  SendByte(Color_BK>>8) ;  
+    926                  SendByte(Color_BK);
+    927                }            
+    928                temp <<= 1 ;
+    929              }
+    930            }
+    931            //LCD_CS_SET ; andy
+    932            LCD_DC_SET ;
+    933          }
+    934          
+    935          /****************************************************************************
+    936          * 名    称: LCD_write_EN_string()
+    937          * 功    能: 在指定位置显示 7 ×14 点阵ASCII字符串 
+    938          * 入口参数: X - 显示位置左上角横坐标      Y —显示位置左上角纵坐标
+    939          *           s —字符串指针                  
+    940          * 出口参数: 无
+    941          ****************************************************************************/
+    942          void LCD_write_EN_string(unsigned char X,unsigned char Y,uint8 *s)
+    943          {
+    944            unsigned char i=0;
+    945            
+    946            while (*s)
+    947            {
+    948              LCD_write_EN(X+i*7,Y,*s);
+    949              s++;
+    950              i++;
+    951              if(i>=HAL_LCD_MAX_CHARS)return;
+    952            }
+    953            return;
+    954          }
+    955          
+    956          /****************************************************************************
+    957          * 名    称: LCD_write_CN()
+    958          * 功    能: 在指定位置显示 14 ×14 点阵汉字字符  
+    959          * 入口参数: X - 显示位置左上角横坐标      Y —显示位置左上角纵坐标
+    960          *           c —显示字符指针                  
+    961          * 出口参数: 无
+    962          ****************************************************************************/
+    963          static void LCD_write_CN(unsigned int X, unsigned int Y, unsigned char c)
+    964          {
+    965            unsigned char i,j,temp;
+    966            
+    967            LCD_set_window(X,Y,14,14);  //按字符点阵大小设置显示窗口
+    968            //LCD_CS_CLR;               //液晶SPI使能andy
+    969            LCD_DC_SET;                 //发送数据信号使能
+    970            for(i=0;i<28;i++)           // 14x14字符点阵数据大小为2x14=28字节
+    971            {
+    972              temp = CN14x14[c][i] ;    //读字模数组
+    973              for(j=0;j<8;j++)          // 按位显示
+    974              {
+    975                if(temp&0x80)           //如果位值为1，显示字符色
+    976                {
+    977                  SendByte(Color>>8);  
+    978                  SendByte(Color) ;
+    979                }
+    980                else                    //如果位值为0，显示背景色
+    981                {
+    982                  SendByte(Color_BK>>8) ;  
+    983                  SendByte(Color_BK);
+    984                }            
+    985                temp <<= 1 ;
+    986              }
+    987              i++ ;                     //指向下一字节
+    988              temp = CN14x14[c][i];
+    989              for(j=0;j<6;j++)          // 按位显示，点阵横向为14像素，
+    990              {                         // 所以每行第2字节最后2位抛弃
+    991                if(temp&0x80)           // 如果位值为1，显示字符色
+    992                {
+    993                  SendByte(Color>>8);  
+    994                  SendByte(Color) ;
+    995                }
+    996                else                    // 如果位值为0，显示背景色
+    997                {
+    998                  SendByte(Color_BK>>8) ;  
+    999                  SendByte(Color_BK);
+   1000                }            
+   1001                temp <<= 1 ;
+   1002              }
+   1003            }
+   1004            //LCD_CS_SET;               //液晶SPI禁止
+   1005            LCD_DC_SET;                 //数据控制信号禁止
+   1006          }
+   1007          
+   1008          /****************************************************************************
+   1009          * 名    称: LCD_write_CN_string()
+   1010          * 功    能: 在指定位置显示 14 ×14 点阵中文字符串   
+   1011          * 入口参数: X - 显示位置左上角横坐标      Y —显示位置左上角纵坐标
+   1012          *           s —字符串指针                  
+   1013          * 出口参数: 无
+   1014          ****************************************************************************/
+   1015          void LCD_write_CN_string(unsigned char X,unsigned char Y,uint8 *s)
+   1016          {
+   1017            unsigned char i=0;
+   1018            static unsigned char j=0;
+   1019            
+   1020            while (*s)
+   1021            {
+   1022              for(j=0;j<ALL_CNS;j++)                  //搜索点阵字模
+   1023              { 
+   1024                if(  *s    ==CN14x14_Index[j*2]            
+   1025                   &&*(s+1)==CN14x14_Index[j*2+1])    //汉字内码存在于字模索引数组中
+   1026                {
+   1027                  LCD_write_CN(X+i*14,Y,j) ;          //显示汉字
+   1028                  break; 
+   1029                }
+   1030              }
+   1031              if(j>=ALL_CNS)                          //无此字的点阵字模
+   1032              {
+   1033                DrawRectFill(X+i*14,Y,14,14,Color_BK);//显示空格
+   1034              }
+   1035              s++; s++ ;                              //字符指针移位
+   1036              i++;
+   1037              if(i>=HAL_LCD_MAX_CHARS/2)  
+   1038                return;                               //超过最大显示字符数，返回
+   1039            }
+   1040            return ;
+   1041          }
+   1042          
+   1043          /****************************************************************************
+   1044          * 名    称: ShowImage()
+   1045          * 功    能: 显示图片   
+   1046          * 入口参数: p - 图片点阵数据  取模方式 水平扫描 从左到右 低位在前           
+   1047          * 出口参数: 无
+   1048          ****************************************************************************/
+   1049          void ShowImage(const unsigned char *p) 
+   1050          {
+   1051            int i; 
+   1052            unsigned char picH,picL;
+   1053            
+   1054            LCD_set_window(24,5,80,40); //坐标设置
+   1055            for(i=0;i<80*40;i++)
+   1056            {	
+   1057              picL=*(p+i*2);	//数据低位在前
+   1058              picH=*(p+i*2+1);				
+   1059              LCD_WriteData_16Bit(picH<<8|picL);  						
+   1060            }	
+   1061          }
+   1062          
+   1063          //初始化LCD
+   1064          void HalLcd_HW_Init(void)
+   1065          {
+   1066            P0SEL &= 0xFE; //设置P00为普通IO口，
+   1067            P0DIR |= 0x01; //设置P00为输出
+   1068            P1SEL &= 0x73; //设置P12，P13,P17为普通IO口
+   1069            P1DIR |= 0x8c; //设置P12，P13,P17为输出 
+   1070          
+   1071            Lcd_Reset();
+   1072            
+   1073          #ifdef HARDWARE_SPI                                         
+   1074            P1DIR &= 0x9F;
+   1075            SPI_Init();   //初始化SPI端口  
+   1076          #endif
+   1077           
+   1078            LCD_write_byte(0x11,LCD_COMMAND); //退出睡眠模式
+   1079            DelayMS(1); 
+   1080          
+   1081            ///ST7735R Frame Rate
+   1082            LCD_write_byte(0xB1,LCD_COMMAND); 
+   1083            LCD_write_byte(0x01,LCD_DATA); 
+   1084            LCD_write_byte(0x2C,LCD_DATA); 
+   1085            LCD_write_byte(0x2D,LCD_DATA); 
+   1086            LCD_write_byte(0xB2,LCD_COMMAND); 
+   1087            LCD_write_byte(0x01,LCD_DATA); 
+   1088            LCD_write_byte(0x2C,LCD_DATA); 
+   1089            LCD_write_byte(0x2D,LCD_DATA); 
+   1090            LCD_write_byte(0xB3,LCD_COMMAND); 
+   1091            LCD_write_byte(0x01,LCD_DATA); 
+   1092            LCD_write_byte(0x2C,LCD_DATA); 
+   1093            LCD_write_byte(0x2D,LCD_DATA); 
+   1094            LCD_write_byte(0x01,LCD_DATA); 
+   1095            LCD_write_byte(0x2C,LCD_DATA); 
+   1096            LCD_write_byte(0x2D,LCD_DATA); 
+   1097          
+   1098            LCD_write_byte(0xB4,LCD_COMMAND);//列对调
+   1099            LCD_write_byte(0x07,LCD_DATA); 
+   1100            //ST7735R加电序列
+   1101            LCD_write_byte(0xC0,LCD_COMMAND); 
+   1102            LCD_write_byte(0xA2,LCD_DATA); 
+   1103            LCD_write_byte(0x02,LCD_DATA); 
+   1104            LCD_write_byte(0x84,LCD_DATA); 
+   1105            LCD_write_byte(0xC1,LCD_COMMAND); 
+   1106            LCD_write_byte(0xC5,LCD_DATA); 
+   1107            LCD_write_byte(0xC2,LCD_COMMAND); 
+   1108            LCD_write_byte(0x0A,LCD_DATA); 
+   1109            LCD_write_byte(0x00,LCD_DATA); 
+   1110            LCD_write_byte(0xC3,LCD_COMMAND); 
+   1111            LCD_write_byte(0x8A,LCD_DATA); 
+   1112            LCD_write_byte(0x2A,LCD_DATA); 
+   1113            LCD_write_byte(0xC4,LCD_COMMAND); 
+   1114            LCD_write_byte(0x8A,LCD_DATA); 
+   1115            LCD_write_byte(0xEE,LCD_DATA); 
+   1116          
+   1117            LCD_write_byte(0xC5,LCD_COMMAND); //加VCOM 
+   1118            LCD_write_byte(0x0E,LCD_DATA); 
+   1119          
+   1120            LCD_write_byte(0x36,LCD_COMMAND); //RGB模式 
+   1121            LCD_write_byte(0xC8,LCD_DATA); 
+   1122            
+   1123            // ST7735R Gamma 校正序列
+   1124            LCD_write_byte(0xe0,LCD_COMMAND); 
+   1125            LCD_write_byte(0x0f,LCD_DATA); 
+   1126            LCD_write_byte(0x1a,LCD_DATA); 
+   1127            LCD_write_byte(0x0f,LCD_DATA); 
+   1128            LCD_write_byte(0x18,LCD_DATA); 
+   1129            LCD_write_byte(0x2f,LCD_DATA); 
+   1130            LCD_write_byte(0x28,LCD_DATA); 
+   1131            LCD_write_byte(0x20,LCD_DATA); 
+   1132            LCD_write_byte(0x22,LCD_DATA); 
+   1133            LCD_write_byte(0x1f,LCD_DATA); 
+   1134            LCD_write_byte(0x1b,LCD_DATA); 
+   1135            LCD_write_byte(0x23,LCD_DATA); 
+   1136            LCD_write_byte(0x37,LCD_DATA); 
+   1137            LCD_write_byte(0x00,LCD_DATA); 
+   1138          
+   1139            LCD_write_byte(0x07,LCD_DATA); 
+   1140            LCD_write_byte(0x02,LCD_DATA); 
+   1141            LCD_write_byte(0x10,LCD_DATA); 
+   1142            LCD_write_byte(0xe1,LCD_COMMAND); 
+   1143            LCD_write_byte(0x0f,LCD_DATA); 
+   1144            LCD_write_byte(0x1b,LCD_DATA); 
+   1145            LCD_write_byte(0x0f,LCD_DATA); 
+   1146            LCD_write_byte(0x17,LCD_DATA); 
+   1147            LCD_write_byte(0x33,LCD_DATA); 
+   1148            LCD_write_byte(0x2c,LCD_DATA); 
+   1149            LCD_write_byte(0x29,LCD_DATA); 
+   1150            LCD_write_byte(0x2e,LCD_DATA); 
+   1151            LCD_write_byte(0x30,LCD_DATA); 
+   1152            LCD_write_byte(0x30,LCD_DATA); 
+   1153            LCD_write_byte(0x39,LCD_DATA); 
+   1154            LCD_write_byte(0x3f,LCD_DATA); 
+   1155            LCD_write_byte(0x00,LCD_DATA); 
+   1156            LCD_write_byte(0x07,LCD_DATA); 
+   1157            LCD_write_byte(0x03,LCD_DATA); 
+   1158            LCD_write_byte(0x10,LCD_DATA);  
+   1159          
+   1160            LCD_write_byte(0x2a,LCD_COMMAND);
+   1161            LCD_write_byte(0x00,LCD_DATA);
+   1162            LCD_write_byte(0x00,LCD_DATA);
+   1163            LCD_write_byte(0x00,LCD_DATA);
+   1164            LCD_write_byte(0x7f,LCD_DATA);
+   1165            LCD_write_byte(0x2b,LCD_COMMAND);
+   1166            LCD_write_byte(0x00,LCD_DATA);
+   1167            LCD_write_byte(0x00,LCD_DATA);
+   1168            LCD_write_byte(0x00,LCD_DATA);
+   1169            LCD_write_byte(0x9f,LCD_DATA);
+   1170          
+   1171            LCD_write_byte(0xF0,LCD_COMMAND); //使能测试命令  
+   1172            LCD_write_byte(0x01,LCD_DATA); 
+   1173            LCD_write_byte(0xF6,LCD_COMMAND); //关闭ram省电模式 
+   1174            LCD_write_byte(0x00,LCD_DATA); 
+   1175          
+   1176            LCD_write_byte(0x3A,LCD_COMMAND); //色深16bit 
+   1177            LCD_write_byte(0x05,LCD_DATA); 
+   1178            
+   1179            LCD_write_byte(0x29,LCD_COMMAND); //开显示  
+   1180            LCD_clear(GREEN);                 //清屏 
+   1181          }
+   1182          #endif
+
+Errors: 1
+Warnings: none

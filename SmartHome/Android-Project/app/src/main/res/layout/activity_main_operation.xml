@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="luograduationproject.myapplication.MainOperationAct">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/background_blue_white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@drawable/left_arrow"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="MyStytle"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/set"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:src="@drawable/gdou"/>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/ly_content"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+    <RadioGroup
+        android:id="@+id/rg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_blue_white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tab1"
+            style="@style/tab_menu_item"
+            android:background="@color/background_blue_white"
+            android:drawableTop="@drawable/tab1_select"
+            android:text="阳台" />
+
+        <RadioButton
+            android:id="@+id/tab2"
+            style="@style/tab_menu_item"
+            android:background="@color/background_blue_white"
+            android:drawableTop="@drawable/tab2_select"
+            android:text="门外" />
+
+        <RadioButton
+            android:background="@color/background_blue_white"
+            android:id="@+id/tab3"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab3_select"
+            android:text="厨房" />
+
+    </RadioGroup>
+
+
+
+</LinearLayout>

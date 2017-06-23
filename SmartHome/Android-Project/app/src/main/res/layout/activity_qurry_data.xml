@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QurryFile.QurryDataAct">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_clean"
+        android:layout_centerVertical="true"
+        android:text="清除全部记录"
+        android:textSize="13sp"
+        android:textColor="@color/text_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/title"
+        android:textSize="15sp"
+        android:text="标题"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_marginTop="5dp"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+   <LinearLayout
+
+       android:layout_height="50dp"
+      android:orientation="horizontal"
+       android:background="@color/background_blue_white"
+       android:layout_width="match_parent">
+
+
+           <TextView
+               android:gravity="center"
+               android:text="时间"
+               android:textSize="18dp"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="match_parent"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black"/>
+
+               <TextView
+                   android:gravity="center"
+                   android:id="@+id/part1"
+                   android:textSize="18dp"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="match_parent"/>
+       <View
+           android:layout_width="1dp"
+           android:layout_height="match_parent"
+           android:background="@color/black"/>
+           <TextView
+               android:gravity="center"
+               android:id="@+id/part2"
+               android:textSize="18dp"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="match_parent"/>
+       <View
+           android:layout_width="1dp"
+           android:layout_height="match_parent"
+           android:background="@color/black"/>
+           <TextView
+               android:gravity="center"
+               android:id="@+id/part3"
+               android:textSize="18dp"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="match_parent"/>
+       <View
+           android:layout_width="1dp"
+           android:layout_height="match_parent"
+           android:background="@color/black"/>
+   </LinearLayout>
+
+    <View
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+    <TextView
+        android:visibility="gone"
+        android:gravity="center"
+        android:text="当前服务端无数据@_@"
+        android:textSize="18dp"
+        android:id="@+id/tv_tip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>
