@@ -1,2 +1,1 @@
-# SmartHomeProject
-This is a simple about smart home control system project  .This system mainly talk about mobile phone control the device in home  .It contents Android、STM32、Zigbeee project.  
+这是一个简单的智能家居控制系统。主要功能是利用Zigbee模块实现传感网络组网。节点放置家中相应位置，测试相应环境因素以及控制相关设备。手机通过无线网络与中心节点进行通信。实现手机控制家中设备。手机APP显示各节点状况，实现数据上传云端和查看功能。详细过程可以看 论文文档。 
